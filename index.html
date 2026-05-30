@@ -21,6 +21,7 @@
         <a href="index.html" class="active">Start</a>
         <a href="werdegang.html">Werdegang</a>
         <a href="projekte.html">Projekte</a>
+        <a href="#bewertungen">Bewertungen</a>
         <a href="#kontakt">Kontakt</a>
       </div>
     </div>
@@ -146,6 +147,132 @@
     </div>
   </section>
 
+  <!-- BEWERTUNGEN / REZENSIONEN -->
+  <section class="section reveal" id="bewertungen">
+    <div class="container">
+      <div class="section-tag">Stimmen</div>
+      <h2 class="section-title">Was Kunden &amp; Partner <em>sagen</em>.</h2>
+      <p class="section-lead" style="margin-bottom:48px;">
+        Ehrliche Rückmeldungen von Menschen, mit denen ich gearbeitet habe — und denen ich Websites gebaut habe.
+      </p>
+
+      <!-- ANZEIGE DER BEWERTUNGEN
+           Neue Bewertungen einfach als <div class="review-card">...</div> einfügen.
+           Wenn keine Bewertungen vorhanden sind, kann der Block ausgeblendet werden.
+      -->
+      <div class="reviews-grid">
+
+        <!-- Beispiel 1 — PLATZHALTER, anpassen oder löschen -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-stars">★★★★★</div>
+            <span class="review-project-badge">Campingbox Germany</span>
+          </div>
+          <p class="review-text">
+            Anas hat unsere Website verzaubert — das sieht aus, als hätte ein Experte sie gemacht. Er war zuverlässig, hat mitgedacht und uns durch jeden Schritt begleitet.
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">S</div>
+            <div class="review-author-info">
+              <div class="name">Sümeyra Samli</div>
+              <div class="role">Auftraggeberin · Campingbox Germany</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beispiel 2 — PLATZHALTER, anpassen oder löschen -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-stars">★★★★★</div>
+            <span class="review-project-badge">Quantenphilosophie</span>
+          </div>
+          <p class="review-text">
+            Das Design war genau das, was wir uns vorgestellt hatten — elegant, durchdacht und mit interaktiven Elementen, die unser Thema lebendig machen.
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">R</div>
+            <div class="review-author-info">
+              <div class="name">Rümeysa Samli</div>
+              <div class="role">Studienprojekt · TH Köln</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TOGGLE: Bewertung abgeben -->
+      <div class="review-cta-wrap">
+        <button type="button" class="btn btn-ghost" id="reviewToggle">
+          Eigene Bewertung abgeben <span class="arrow">↓</span>
+        </button>
+      </div>
+
+      <!-- FORMULAR -->
+      <div class="review-form-wrap" id="reviewFormWrap">
+        <h3>Deine Bewertung</h3>
+        <p class="sub">Wir haben zusammen gearbeitet? Erzähl mir deine Erfahrung — sie hilft anderen, mich besser einzuschätzen.</p>
+
+        <form id="reviewForm" action="https://api.web3forms.com/submit" method="POST">
+          <!-- Web3Forms Konfiguration -->
+          <input type="hidden" name="access_key" value="2a01a870-8397-4902-ba7a-2f0ba2d3a89f">
+          <input type="hidden" name="subject" value="Neue Bewertung über Portfolio anas-jabaly.de">
+          <input type="hidden" name="redirect" value="false">
+          <input type="checkbox" name="botcheck" style="display:none;">
+
+          <div class="form-row">
+            <label for="rev-name">Dein Name *</label>
+            <input type="text" id="rev-name" name="Name" placeholder="Max Mustermann" required>
+          </div>
+
+          <div class="form-row">
+            <label for="rev-role">Position / Firma (optional)</label>
+            <input type="text" id="rev-role" name="Position" placeholder="z.B. Geschäftsführer · Mustermann GmbH">
+          </div>
+
+          <div class="form-row">
+            <label for="rev-project">Für welches Projekt? *</label>
+            <select id="rev-project" name="Projekt" required>
+              <option value="">— Bitte auswählen —</option>
+              <option value="Campingbox Germany">Campingbox Germany (WooCommerce-Shop)</option>
+              <option value="PeerLearn TH">PeerLearn TH (Lernplattform)</option>
+              <option value="Quantenphilosophie">Quantenphilosophie (Editorial Site)</option>
+              <option value="Allgemein / anderes Projekt">Allgemein / anderes Projekt</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label>Bewertung *</label>
+            <div class="star-picker">
+              <input type="radio" id="rev-s5" name="Bewertung" value="5" checked><label for="rev-s5">★</label>
+              <input type="radio" id="rev-s4" name="Bewertung" value="4"><label for="rev-s4">★</label>
+              <input type="radio" id="rev-s3" name="Bewertung" value="3"><label for="rev-s3">★</label>
+              <input type="radio" id="rev-s2" name="Bewertung" value="2"><label for="rev-s2">★</label>
+              <input type="radio" id="rev-s1" name="Bewertung" value="1"><label for="rev-s1">★</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="rev-email">Deine E-Mail (wird nicht veröffentlicht) *</label>
+            <input type="email" id="rev-email" name="Email" placeholder="dein@email.de" required>
+          </div>
+
+          <div class="form-row">
+            <label for="rev-text">Deine Erfahrung *</label>
+            <textarea id="rev-text" name="Bewertung_Text" placeholder="Wie war die Zusammenarbeit? Was hat dir gefallen?" required></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Bewertung absenden <span class="arrow">→</span></button>
+            <button type="button" class="btn btn-ghost" id="reviewCancel">Abbrechen</button>
+          </div>
+
+          <div class="form-msg" id="reviewMsg"></div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
   <!-- KONTAKT -->
   <section class="section contact" id="kontakt">
     <div class="container">
@@ -156,6 +283,7 @@
       <a href="mailto:anasjab807@gmail.com" class="contact-mail">anasjab807@gmail.com <span>→</span></a>
 
       <div class="contact-links">
+        <a href="https://github.com/anasJabaly" target="_blank" rel="noopener">GitHub ↗</a>
         <a href="https://www.linkedin.com/in/anas-jabaly" target="_blank" rel="noopener">LinkedIn ↗</a>
         <a href="werdegang.html">Lebenslauf</a>
         <a href="projekte.html">Projekte</a>

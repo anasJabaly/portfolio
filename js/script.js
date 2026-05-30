@@ -71,4 +71,65 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ============================================================
+     REZENSIONS-FORMULAR (nur auf Startseite)
+     ============================================================ */
+  const reviewToggle  = document.getElementById('reviewToggle');
+  const reviewWrap    = document.getElementById('reviewFormWrap');
+  const reviewCancel  = document.getElementById('reviewCancel');
+  const reviewForm    = document.getElementById('reviewForm');
+  const reviewMsg     = document.getElementById('reviewMsg');
+
+  if (reviewToggle && reviewWrap) {
+    reviewToggle.addEventListener('click', () => {
+      reviewWrap.classList.add('open');
+      reviewToggle.style.display = 'none';
+      setTimeout(() => {
+        reviewWrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 100);
+    });
+  }
+
+  if (reviewCancel) {
+    reviewCancel.addEventListener('click', () => {
+      reviewWrap.classList.remove('open');
+      reviewToggle.style.display = 'inline-flex';
+      reviewForm.reset();
+      reviewMsg.className = 'form-msg';
+      reviewMsg.textContent = '';
+    });
+  }
+
+  if (reviewForm) {
+    reviewForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(reviewForm);
+      const submitBtn = reviewForm.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Wird gesendet...';
+
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await res.json();
+
+        if (data.success) {
+          reviewMsg.className = 'form-msg success';
+          reviewMsg.textContent = '✓ Vielen Dank! Deine Bewertung wurde erfolgreich gesendet. Ich prüfe sie und stelle sie ggf. demnächst auf der Seite online.';
+          reviewForm.reset();
+        } else {
+          throw new Error(data.message || 'Unbekannter Fehler');
+        }
+      } catch (err) {
+        reviewMsg.className = 'form-msg error';
+        reviewMsg.textContent = '✗ Das hat leider nicht funktioniert. Bitte versuche es später erneut oder schreib mir direkt eine E-Mail.';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Bewertung absenden <span class="arrow">→</span>';
+      }
+    });
+  }
+
 });
