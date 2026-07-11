@@ -9,8 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.querySelector('.nav-toggle');
   const links  = document.querySelector('.nav-links');
   if (toggle && links) {
+    toggle.setAttribute('aria-expanded', 'false');
     toggle.addEventListener('click', () => {
-      links.classList.toggle('open');
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
     });
     // Menü schließen beim Klick auf einen Link (mobil)
     links.querySelectorAll('a').forEach(a => {

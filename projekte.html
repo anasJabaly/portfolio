@@ -5,9 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projekte · Anas Jabaly</title>
   <meta name="description" content="Alle Projekte von Anas Jabaly im Detail — Web, Software und Embedded Systems.">
+  <!-- Performance: Fonts vorverbinden & direkt laden (statt @import im CSS) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <!-- Open Graph / Social Sharing -->
+  <link rel="canonical" href="https://anas-jabaly.de/projekte">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="Projekte · Anas Jabaly">
+  <meta property="og:description" content="Alle Projekte von Anas Jabaly im Detail — Web-Entwicklung, Software und Embedded Systems. Vom WooCommerce-Shop bis zur FPGA-Schaltung.">
+  <meta property="og:url" content="https://anas-jabaly.de/projekte">
+  <meta property="og:image" content="https://anas-jabaly.de/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
   <!-- NAV -->
   <nav class="nav">
@@ -27,7 +44,7 @@
   </nav>
 
   <!-- PAGE HEAD -->
-  <header class="page-head">
+  <header class="page-head" id="main">
     <div class="container">
       <div class="section-tag">Portfolio</div>
       <h1 class="section-title">Meine <em>Projekte</em>.</h1>
@@ -38,7 +55,7 @@
   </header>
 
   <!-- PROJECTS -->
-  <section class="section" style="padding-top:32px;">
+  <section class="section section-tight-sm">
     <div class="container">
 
       <!-- Filter -->
@@ -55,7 +72,7 @@
         <article class="proj-item" data-cat="web">
           <a href="https://campingbox-dev.de" target="_blank" rel="noopener" class="proj-visual c-brown">
             <span class="badge">eCommerce</span>
-            <span class="emoji">🚐</span>
+            <span class="feat-mono">CG</span>
           </a>
           <div class="proj-content">
             <div class="top">
@@ -84,7 +101,7 @@
         <article class="proj-item" data-cat="web software">
           <a href="https://peerlearn-th.netlify.app" target="_blank" rel="noopener" class="proj-visual c-blue">
             <span class="badge">Web-App</span>
-            <span class="emoji">🎓</span>
+            <span class="feat-mono">PL</span>
           </a>
           <div class="proj-content">
             <div class="top">
@@ -109,7 +126,7 @@
         <article class="proj-item" data-cat="web">
           <a href="https://quanten-twins.netlify.app" target="_blank" rel="noopener" class="proj-visual c-beige">
             <span class="badge">Editorial</span>
-            <span class="emoji">⚛️</span>
+            <span class="feat-mono">QP</span>
           </a>
           <div class="proj-content">
             <div class="top">
@@ -135,7 +152,7 @@
         <article class="proj-item" data-cat="hardware">
           <div class="proj-visual c-blue">
             <span class="badge">Hardware</span>
-            <span class="emoji">🔲</span>
+            <span class="feat-mono">FP</span>
           </div>
           <div class="proj-content">
             <div class="top">
@@ -161,7 +178,7 @@
         <article class="proj-item" data-cat="hardware software">
           <div class="proj-visual c-brown">
             <span class="badge">Embedded</span>
-            <span class="emoji">🔌</span>
+            <span class="feat-mono">AR</span>
           </div>
           <div class="proj-content">
             <div class="top">
@@ -187,7 +204,7 @@
         <article class="proj-item" data-cat="software">
           <div class="proj-visual c-beige">
             <span class="badge">in Arbeit</span>
-            <span class="emoji">🎮</span>
+            <span class="feat-mono">JV</span>
           </div>
           <div class="proj-content">
             <div class="top">
@@ -215,10 +232,10 @@
   <!-- KONTAKT -->
   <section class="section contact" id="kontakt">
     <div class="container">
-      <div class="section-tag" style="justify-content:center;">Kontakt</div>
+      <div class="section-tag tag-center">Kontakt</div>
       <h2 class="contact-title">Ein Projekt <em>im Kopf?</em></h2>
       <p class="contact-sub">Ob Website, Shop oder eine kleine App — erzähl mir davon. Ich freue mich auf neue Herausforderungen.</p>
-      <a href="mailto:anasjab807@gmail.com" class="contact-mail">anasjab807@gmail.com <span>→</span></a>
+      <a href="mailto:kontakt@anasjabaly.de" class="contact-mail">kontakt@anasjabaly.de <span>→</span></a>
       <div class="contact-links">
         <a href="https://www.linkedin.com/in/anas-jabaly" target="_blank" rel="noopener">LinkedIn ↗</a>
         <a href="werdegang.html">Werdegang</a>
@@ -232,7 +249,9 @@
     <div class="container">
       <div class="footer-inner">
         <span>© 2026 Anas Jabaly · Solingen / Köln</span>
-        <span>Built with care · just HTML, CSS &amp; JS</span>
+        <span class="footer-legal">
+          <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a>
+        </span>
       </div>
     </div>
   </footer>

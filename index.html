@@ -6,9 +6,26 @@
   <title>Anas Jabaly | Webentwicklung & IT-Portfolio</title>
   <meta name="google-site-verification" content="bxrC4iL4JMYuViwOvAP5BPGTS5u8wKxDCSJ206bpY9Y" />
   <meta name="description" content="Portfolio von Anas Jabaly. Student der Technischen Informatik an der TH Köln und Webentwickler aus Solingen. Entdecke meine Projekte wie Campingbox Germany und PeerLearn TH.">
+  <!-- Performance: Fonts vorverbinden & direkt laden (statt @import im CSS) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <!-- Open Graph / Social Sharing -->
+  <link rel="canonical" href="https://anas-jabaly.de/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="Anas Jabaly | Webentwicklung & IT-Portfolio">
+  <meta property="og:description" content="Portfolio von Anas Jabaly. Student der Technischen Informatik an der TH Köln und Webentwickler aus Solingen. Entdecke meine Projekte wie Campingbox Germany und PeerLearn TH.">
+  <meta property="og:url" content="https://anas-jabaly.de/">
+  <meta property="og:image" content="https://anas-jabaly.de/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
   <!-- NAV -->
   <nav class="nav">
@@ -29,7 +46,7 @@
   </nav>
 
   <!-- HERO -->
-  <header class="hero">
+  <header class="hero" id="main">
     <div class="container">
       <div class="hero-meta">
         <span class="pill"><span class="blink"></span> Offen für Werkstudent &amp; Freelance</span>
@@ -58,23 +75,23 @@
     <div class="container">
       <div class="section-tag">Auf einen Blick</div>
       <h2 class="section-title">Was ich <em>mache</em>.</h2>
-      <p class="section-lead" style="margin-bottom:48px;">
+      <p class="section-lead lead-spaced">
         Drei Bereiche, in denen ich zu Hause bin — von der Idee bis zur Live-Schaltung.
       </p>
 
       <div class="overview-grid">
         <div class="ov-card">
-          <div class="ov-icon">🌐</div>
+          <div class="ov-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.9 5.7 3.9 9S14.5 18.4 12 21M12 3c-2.5 2.6-3.9 5.7-3.9 9s1.4 6.4 3.9 9"/></svg></div>
           <h3>Web-Entwicklung</h3>
           <p>Moderne Websites &amp; Online-Shops. Von HTML/CSS/JS bis WordPress &amp; WooCommerce — inklusive Hosting, Sicherheit und DSGVO.</p>
         </div>
         <div class="ov-card">
-          <div class="ov-icon">💻</div>
+          <div class="ov-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13 5l-2 14"/></svg></div>
           <h3>Software &amp; KI</h3>
           <p>Mein Studienschwerpunkt. Java &amp; OOP auf fortgeschrittenem Niveau, dazu Python, C und ein Faible für Künstliche Intelligenz.</p>
         </div>
         <div class="ov-card">
-          <div class="ov-icon">⚙️</div>
+          <div class="ov-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/></svg></div>
           <h3>Hardware &amp; Embedded</h3>
           <p>Vom FPGA-Schaltkreis in VHDL bis zur Arduino-Steuerung mit SPI. Ich verstehe die Maschine bis auf die unterste Ebene.</p>
         </div>
@@ -83,7 +100,7 @@
   </section>
 
   <!-- STAT STRIP -->
-  <section class="section reveal" style="padding-top:0;">
+  <section class="section reveal section-flush">
     <div class="container">
       <div class="stat-strip">
         <div class="stat-cell">
@@ -111,13 +128,13 @@
     <div class="container">
       <div class="section-tag">Ausgewählt</div>
       <h2 class="section-title">Aktuelle <em>Projekte</em>.</h2>
-      <p class="section-lead" style="margin-bottom:48px;">
+      <p class="section-lead lead-spaced">
         Ein kleiner Auszug — alle Projekte mit Details findest du im Projekte-Tab.
       </p>
 
       <div class="feat-grid">
         <a href="https://campingbox-dev.de" target="_blank" rel="noopener" class="feat-card">
-          <div class="feat-visual v2"><span class="emoji">🚐</span></div>
+          <div class="feat-visual v2"><span class="feat-mono">CG</span></div>
           <div class="feat-body">
             <h3>Campingbox Germany <span class="ext">↗</span></h3>
             <p>Kompletter WooCommerce-Online-Shop für ein deutsches Camping-Unternehmen — mit Versand, Terminbuchung, PDF-Rechnungen und DSGVO.</p>
@@ -130,7 +147,7 @@
         </a>
 
         <a href="https://peerlearn-th.netlify.app" target="_blank" rel="noopener" class="feat-card">
-          <div class="feat-visual v1"><span class="emoji">🎓</span></div>
+          <div class="feat-visual v1"><span class="feat-mono">PL</span></div>
           <div class="feat-body">
             <h3>PeerLearn TH <span class="ext">↗</span></h3>
             <p>Lernplattform-Konzept für die TH Köln: Modul-Hub, Mentor-Matching und KI-Assistent in einem durchdachten App-Interface.</p>
@@ -152,21 +169,20 @@
   <section class="section reveal" id="bewertungen">
     <div class="container">
       <div class="section-tag">Stimmen</div>
-      <h2 class="section-title">Was Kunden &amp; Partner <em>sagen</em>.</h2>
-      <p class="section-lead" style="margin-bottom:48px;">
-        Ehrliche Rückmeldungen von Menschen, mit denen ich gearbeitet habe — und denen ich Websites gebaut habe.
+      <h2 class="section-title">Stimmen zur <em>Zusammenarbeit</em>.</h2>
+      <p class="section-lead lead-spaced">
+        Ehrliche Rückmeldungen aus echten Projekten — transparent und ungefiltert.
       </p>
 
       <!-- ANZEIGE DER BEWERTUNGEN
-           Neue Bewertungen einfach als <div class="review-card">...</div> einfügen.
-           Wenn keine Bewertungen vorhanden sind, kann der Block ausgeblendet werden.
+           Neue Bewertungen als <div class="review-card">...</div> in .reviews-grid einfügen
+           und den .reviews-empty Block entfernen.
       -->
-      <div class="reviews-grid">
-
-      
-    
-
+      <div class="reviews-empty">
+        <p>Die ersten Projektbewertungen werden aktuell eingeholt und erscheinen in Kürze an dieser Stelle.</p>
+        <p class="reviews-empty-sub">Du hast bereits mit mir gearbeitet? Dann freue ich mich über deine Rückmeldung.</p>
       </div>
+      <div class="reviews-grid"></div>
 
       <!-- TOGGLE: Bewertung abgeben -->
       <div class="review-cta-wrap">
@@ -229,6 +245,11 @@
             <textarea id="rev-text" name="Bewertung_Text" placeholder="Wie war die Zusammenarbeit? Was hat dir gefallen?" required></textarea>
           </div>
 
+          <p class="form-privacy">
+            Mit dem Absenden erklärst du dich einverstanden, dass deine Angaben zur Bearbeitung deiner Bewertung
+            verarbeitet werden. Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.
+          </p>
+
           <div class="form-actions">
             <button type="submit" class="btn btn-primary">Bewertung absenden <span class="arrow">→</span></button>
             <button type="button" class="btn btn-ghost" id="reviewCancel">Abbrechen</button>
@@ -244,7 +265,7 @@
   <!-- KONTAKT -->
   <section class="section contact" id="kontakt">
     <div class="container">
-      <div class="section-tag" style="justify-content:center;">Kontakt</div>
+      <div class="section-tag tag-center">Kontakt</div>
       <h2 class="contact-title">Lass uns <em>reden</em>.</h2>
       <p class="contact-sub">Du suchst einen Werkstudenten oder brauchst eine Website für dein Geschäft? Schreib mir — ich antworte schnell.</p>
 
@@ -264,6 +285,9 @@
     <div class="container">
       <div class="footer-inner">
         <span>© 2026 Anas Jabaly · Solingen / Köln</span>
+        <span class="footer-legal">
+          <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a>
+        </span>
       </div>
     </div>
   </footer>

@@ -5,9 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Werdegang · Anas Jabaly</title>
   <meta name="description" content="Der Werdegang von Anas Jabaly — Studium, Erfahrung und Skills als Zeitachse.">
+  <!-- Performance: Fonts vorverbinden & direkt laden (statt @import im CSS) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <!-- Open Graph / Social Sharing -->
+  <link rel="canonical" href="https://anas-jabaly.de/werdegang">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="Werdegang · Anas Jabaly">
+  <meta property="og:description" content="Der Werdegang von Anas Jabaly — Studium an der TH Köln, Berufserfahrung und Skills als interaktive Zeitachse.">
+  <meta property="og:url" content="https://anas-jabaly.de/werdegang">
+  <meta property="og:image" content="https://anas-jabaly.de/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
   <!-- NAV -->
   <nav class="nav">
@@ -27,21 +44,21 @@
   </nav>
 
   <!-- PAGE HEAD -->
-  <header class="page-head">
+  <header class="page-head" id="main">
     <div class="container">
       <div class="section-tag">Lebenslauf</div>
       <h1 class="section-title">Mein <em>Werdegang</em>.</h1>
       <p class="section-lead">
         Von der Schule bis heute — Schritt für Schritt. Scroll nach unten und sieh, wie sich die Jahre zusammenfügen.
       </p>
-      <div class="cv-actions" style="margin-top:28px;">
+      <div class="cv-actions">
         <a href="mailto:kontakt@anasjabaly.de" class="btn btn-ghost">Lebenslauf anfragen <span class="arrow">→</span></a>
       </div>
     </div>
   </header>
 
   <!-- TIMELINE -->
-  <section class="section" style="padding-top:48px;">
+  <section class="section section-tight">
     <div class="container">
       <div class="timeline">
 
@@ -125,7 +142,7 @@
   </section>
 
   <!-- SKILLS -->
-  <section class="section reveal" style="padding-top:0;">
+  <section class="section reveal section-flush">
     <div class="container">
       <div class="section-tag">Fähigkeiten</div>
       <h2 class="section-title">Stack &amp; <em>Sprachen</em>.</h2>
@@ -166,7 +183,7 @@
             <li>Englisch <span class="lv hi">verhandlungssicher</span></li>
             <li>Französisch <span class="lv">grundkenntnisse</span></li>
           </ul>
-          <h3 style="margin-top:32px;">Interessen</h3>
+          <h3 class="mt-32">Interessen</h3>
           <ul>
             <li>Web &amp; Game Dev <span class="lv">·</span></li>
             <li>Künstliche Intelligenz <span class="lv">·</span></li>
@@ -181,10 +198,10 @@
   <!-- KONTAKT -->
   <section class="section contact" id="kontakt">
     <div class="container">
-      <div class="section-tag" style="justify-content:center;">Kontakt</div>
+      <div class="section-tag tag-center">Kontakt</div>
       <h2 class="contact-title">Neugierig <em>geworden?</em></h2>
       <p class="contact-sub">Schreib mir für den vollständigen Lebenslauf oder ein unverbindliches Gespräch.</p>
-      <a href="mailto:anasjab807@gmail.com" class="contact-mail">anasjab807@gmail.com <span>→</span></a>
+      <a href="mailto:kontakt@anasjabaly.de" class="contact-mail">kontakt@anasjabaly.de <span>→</span></a>
       <div class="contact-links">
         <a href="https://www.linkedin.com/in/anas-jabaly" target="_blank" rel="noopener">LinkedIn ↗</a>
         <a href="projekte.html">Projekte</a>
@@ -198,7 +215,9 @@
     <div class="container">
       <div class="footer-inner">
         <span>© 2026 Anas Jabaly · Solingen / Köln</span>
-        <span>Built with care · just HTML, CSS &amp; JS</span>
+        <span class="footer-legal">
+          <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a>
+        </span>
       </div>
     </div>
   </footer>
