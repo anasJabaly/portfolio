@@ -1,0 +1,302 @@
+/* Eigene Datei für die QR-/Networking-Seite.
+   Sie wird bewusst getrennt und versioniert geladen, damit Browser und CDN
+   nach einem Deployment nicht versehentlich alte Styles aus dem Cache nutzen. */
+
+.connect-page {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+.connect-main {
+  min-height: calc(100vh - 68px);
+  min-height: calc(100svh - 68px);
+  display: grid;
+  place-items: center;
+  padding: clamp(28px, 6vw, 72px) 20px;
+}
+
+.connect-card {
+  width: min(760px, 100%);
+  overflow: hidden;
+  position: relative;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  padding: clamp(28px, 6vw, 64px);
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.connect-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 5px;
+  background: linear-gradient(90deg, var(--blue-deep), var(--blue-light), var(--brown-light));
+}
+
+.connect-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: clamp(28px, 5vw, 44px);
+}
+
+.connect-mark {
+  flex: 0 0 auto;
+  width: 62px;
+  height: 62px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font: 600 1.42rem var(--font-display);
+  background: linear-gradient(135deg, var(--blue-deep), var(--brown-light));
+  box-shadow: var(--shadow);
+}
+
+.connect-kicker {
+  margin: 0;
+  color: var(--brown-deep);
+  font: 500 .78rem/1.35 var(--font-mono);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.connect-context {
+  margin: 5px 0 0;
+  color: var(--text-mute);
+  font-size: .82rem;
+}
+
+.connect-title {
+  margin: 0 0 16px;
+  max-width: 680px;
+  color: var(--text);
+  font: 400 clamp(2.65rem, 8vw, 5rem)/.98 var(--font-display);
+  letter-spacing: -.045em;
+}
+
+.connect-title em {
+  color: var(--blue-deep);
+  font-weight: 300;
+}
+
+.connect-role {
+  margin: 0;
+  max-width: 650px;
+  color: var(--brown-deep);
+  font: 500 clamp(.8rem, 2vw, .94rem)/1.6 var(--font-mono);
+}
+
+.connect-intro {
+  max-width: 620px;
+  margin: 20px 0 30px;
+  color: var(--text-soft);
+  font-size: clamp(1rem, 2vw, 1.08rem);
+  line-height: 1.7;
+}
+
+.connect-actions {
+  display: grid;
+  gap: 12px;
+}
+
+.connect-action {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  min-height: 76px;
+  padding: 14px 18px;
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  background: rgba(250, 247, 241, .78);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.connect-action:hover,
+.connect-action:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--blue);
+  box-shadow: var(--shadow-sm);
+}
+
+.connect-action.primary {
+  color: #fff;
+  border-color: var(--blue-deep);
+  background: var(--blue-deep);
+}
+
+.connect-action.linkedin {
+  border-color: rgba(77, 125, 151, .38);
+  background: rgba(185, 211, 224, .22);
+}
+
+.action-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: var(--blue-deep);
+  background: rgba(185, 211, 224, .32);
+  font: 600 .9rem var(--font-mono);
+}
+
+.primary .action-icon {
+  color: #fff;
+  background: rgba(255,255,255,.16);
+}
+
+.action-copy {
+  min-width: 0;
+}
+
+.connect-action strong,
+.connect-action small {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.connect-action strong {
+  font-size: .98rem;
+  line-height: 1.35;
+}
+
+.connect-action small {
+  margin-top: 3px;
+  color: var(--text-soft);
+  font-size: .78rem;
+  line-height: 1.4;
+}
+
+.connect-action.primary small {
+  color: rgba(255,255,255,.76);
+}
+
+.action-arrow {
+  font-size: 1.05rem;
+  opacity: .8;
+}
+
+.connect-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 20px;
+  margin-top: 28px;
+  color: var(--blue-deep);
+  font-size: .88rem;
+}
+
+.connect-links a {
+  padding: 4px 0;
+}
+
+.connect-note {
+  margin: 22px 0 0;
+  color: var(--text-mute);
+  text-align: center;
+  font: 500 .69rem/1.5 var(--font-mono);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+  .connect-page .nav-inner {
+    padding-inline: 16px;
+  }
+
+  .connect-page .nav-logo {
+    font-size: 1.02rem;
+  }
+
+  .connect-main {
+    place-items: start center;
+    padding: 18px 10px 34px;
+  }
+
+  .connect-card {
+    border-radius: 22px;
+    padding: 24px 16px 28px;
+  }
+
+  .connect-head {
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .connect-mark {
+    width: 52px;
+    height: 52px;
+    border-radius: 15px;
+    font-size: 1.18rem;
+  }
+
+  .connect-kicker {
+    font-size: .68rem;
+    letter-spacing: .11em;
+  }
+
+  .connect-context {
+    font-size: .74rem;
+  }
+
+  .connect-title {
+    font-size: clamp(2.45rem, 14vw, 3.75rem);
+  }
+
+  .connect-role {
+    font-size: .75rem;
+    line-height: 1.65;
+  }
+
+  .connect-intro {
+    margin: 17px 0 24px;
+    font-size: .96rem;
+    line-height: 1.65;
+  }
+
+  .connect-action {
+    grid-template-columns: 38px minmax(0, 1fr) auto;
+    gap: 11px;
+    min-height: 70px;
+    padding: 12px 13px;
+    border-radius: 15px;
+  }
+
+  .action-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+    font-size: .78rem;
+  }
+
+  .connect-action strong {
+    font-size: .9rem;
+  }
+
+  .connect-action small {
+    font-size: .71rem;
+  }
+
+  .connect-links {
+    gap: 8px 16px;
+    margin-top: 24px;
+    font-size: .82rem;
+  }
+
+  .connect-note {
+    margin-top: 19px;
+    font-size: .62rem;
+  }
+}
+
+@media (max-width: 370px) {
+  .connect-context { display: none; }
+  .connect-action { grid-template-columns: 36px minmax(0, 1fr) auto; }
+  .action-icon { width: 36px; height: 36px; }
+}

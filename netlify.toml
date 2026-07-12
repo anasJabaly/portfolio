@@ -3,7 +3,7 @@
 [build]
   publish = "."
 
-# Pretty URLs: /werdegang statt /werdegang.html
+# Pretty URLs
 [[redirects]]
   from = "/werdegang"
   to = "/werdegang.html"
@@ -12,6 +12,16 @@
 [[redirects]]
   from = "/projekte"
   to = "/projekte.html"
+  status = 200
+
+[[redirects]]
+  from = "/connect"
+  to = "/connect.html"
+  status = 200
+
+[[redirects]]
+  from = "/peerlearn"
+  to = "/peerlearn.html"
   status = 200
 
 [[redirects]]
@@ -24,7 +34,7 @@
   to = "/datenschutz.html"
   status = 200
 
-# Security-Headers (Best Practice)
+# Security-Headers
 [[headers]]
   for = "/*"
   [headers.values]
@@ -34,16 +44,22 @@
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
 
-# Caching für statische Assets
+# HTML soll nach Deployments sofort neu geprüft werden.
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# CSS und JavaScript während der aktiven Entwicklungsphase nicht eine Woche fest cachen.
 [[headers]]
   for = "/css/*"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "/js/*"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "/img/*"

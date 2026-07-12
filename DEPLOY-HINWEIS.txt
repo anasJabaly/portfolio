@@ -1,0 +1,18 @@
+FEHLERBEHEBUNG FÜR /connect
+
+Das mobile Layout war unformatiert, weil die neu hinzugefügten Connect-Styles
+noch nicht im vom Browser/Netlify gecachten style.css enthalten waren. Die alte
+Netlify-Konfiguration speicherte CSS und JavaScript bis zu 7 Tage.
+
+Behoben durch:
+- eigene Datei css/connect.css
+- Versionsparameter an CSS- und JS-Dateien
+- Cache-Control: must-revalidate für HTML/CSS/JS
+- explizite Redirects für /connect und /peerlearn
+- mobile Optimierung der Networking-Seite
+
+Deployment:
+1. Den gesamten Inhalt dieses Ordners deployen, nicht nur connect.html.
+2. In Netlify ein neues Deployment auslösen.
+3. Danach /connect im privaten Browserfenster öffnen.
+4. Falls Netlify noch alte Assets zeigt: Deploys > Trigger deploy > Clear cache and deploy site.
