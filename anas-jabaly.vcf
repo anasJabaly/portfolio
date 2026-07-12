@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Jabaly;Anas;;;
+FN:Anas Jabaly
+TITLE:Informatikstudent und Softwareentwickler
+ORG:PeerLearn TH
+EMAIL;TYPE=INTERNET,WORK:kontakt@anasjabaly.de
+URL:https://anas-jabaly.de/
+URL;TYPE=LinkedIn:https://www.linkedin.com/in/anas-jabaly
+URL;TYPE=GitHub:https://github.com/anasJabaly
+NOTE:Entwickler von PeerLearn TH - digitale Lösungen für Lernen, Web und KI.
+END:VCARD
