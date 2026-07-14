@@ -434,7 +434,7 @@ ul { list-style: none; }
    FEATURED PROJECTS (Startseite)
    ============================================================ */
 .feat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-.feat-grid-single { grid-template-columns: minmax(0, 760px); }
+.feat-grid-single { grid-template-columns: minmax(0, 760px); justify-content: center; }
 @media (max-width: 720px) { .feat-grid { grid-template-columns: 1fr; } }
 
 .feat-card {

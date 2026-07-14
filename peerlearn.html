@@ -34,8 +34,8 @@
     <header class="case-hero">
       <div class="container">
         <div class="case-eyebrow"><span>Studienpreis 2026</span><span>·</span><span>Pilotprototyp</span></div>
-        <h1>Du musst dein Studium<br><em>nicht allein schaffen.</em></h1>
-        <p>PeerLearn TH verbindet Studierende mit passenden Peers aus höheren Semestern, bündelt modulbezogene Lernmaterialien und ergänzt die menschliche Unterstützung durch einen KI-Lernassistenten.</p>
+        <h1>Peer-Support, Materialien und KI<br><em>in einem Produkt.</em></h1>
+        <p>Ein Full-Stack-Prototyp für studentisches Peer-Learning — mit Matching, Modul-Hubs, Forum, Datei-Storage und einem serverseitig angebundenen KI-Assistenten.</p>
         <div class="hero-cta">
           <a href="https://peerlearn.anas-jabaly.de/" target="_blank" rel="noopener" class="btn btn-primary">Live-Demo öffnen <span class="arrow">↗</span></a>
           <a href="connect.html" class="btn btn-ghost">Kontakt aufnehmen <span class="arrow">→</span></a>
@@ -47,11 +47,11 @@
       <div class="container case-grid two">
         <div>
           <div class="section-tag">Ausgangspunkt</div>
-          <h2 class="section-title">Das Problem ist nicht immer der <em>Stoff</em>.</h2>
+          <h2 class="section-title">Das Wissen war da — aber <em>schlecht erreichbar</em>.</h2>
         </div>
         <div class="case-copy">
-          <p>In meinen ersten Semestern interessierten mich Elektrotechnik und Systemprogrammierung sehr. Trotzdem fehlte mir bei Schwierigkeiten ein niedrigschwelliger Weg zu Menschen, die dieselben Module bereits erfolgreich absolviert hatten.</p>
-          <p>Lernmaterialien waren über private Chatgruppen, Fotos und persönliche Kontakte verteilt. Wer die richtigen Personen nicht kannte, hatte deutlich schlechtere Startbedingungen. Aus dieser Erfahrung entstand PeerLearn.</p>
+          <p>Hilfreiche Mitschriften, Erfahrungswissen und Ansprechpartner:innen existierten bereits, waren aber über private Gruppen und persönliche Kontakte verteilt.</p>
+          <p>Die Produktfrage lautete deshalb nicht „Wie ersetzt KI menschliche Hilfe?“, sondern: Wie werden passende Menschen und freigegebene Materialien zuverlässig auffindbar — und wo kann KI sinnvoll ergänzen?</p>
         </div>
       </div>
     </section>
@@ -59,29 +59,29 @@
     <section class="section case-soft">
       <div class="container">
         <div class="section-tag">Lösung</div>
-        <h2 class="section-title">Menschliche Hilfe zuerst. <em>Technologie unterstützt.</em></h2>
+        <h2 class="section-title">Vier Bausteine, ein <em>klarer Lernfluss</em>.</h2>
         <div class="case-feature-grid">
           <article><span>01</span><h3>Peer-Matching</h3><p>Studierende finden passende Ansprechpartner:innen aus höheren Semestern - gefiltert nach Modul, Studiengang und Verfügbarkeit.</p></article>
           <article><span>02</span><h3>Modul-Hub</h3><p>Freigegebene Zusammenfassungen, Mitschriften und Übungen werden pro Modul strukturiert und dauerhaft auffindbar.</p></article>
           <article><span>03</span><h3>Forum & Community</h3><p>Fragen und Antworten bleiben mit dem jeweiligen Modul verbunden, statt in privaten Gruppen verloren zu gehen.</p></article>
-          <article><span>04</span><h3>KI als Ergänzung</h3><p>Der Lernassistent hilft zeitunabhängig bei grundlegenden Verständnisfragen - mit einem klaren Hinweis auf mögliche Fehler.</p></article>
+          <article><span>04</span><h3>KI als Ergänzung</h3><p>Die API läuft serverseitig statt im Browser; Hinweise zu Grenzen und möglichen Fehlern bleiben sichtbar.</p></article>
         </div>
       </div>
     </section>
 
     <section class="section case-section">
       <div class="container">
-        <div class="section-tag">Umsetzung</div>
-        <h2 class="section-title">Vom Konzept zum <em>funktionsfähigen Prototyp</em>.</h2>
+        <div class="section-tag">Architektur</div>
+        <h2 class="section-title">Wenige Dienste, <em>klare Verantwortlichkeiten</em>.</h2>
         <div class="case-metrics">
-          <div><strong>Supabase</strong><span>PostgreSQL, Authentifizierung und Storage</span></div>
-          <div><strong>JavaScript</strong><span>Responsive Frontend und Anwendungslogik</span></div>
-          <div><strong>Serverless</strong><span>Geschützte API-Anbindung für den KI-Assistenten</span></div>
-          <div><strong>Gastmodus</strong><span>Sichere Demo für Posterwalk und Präsentationen</span></div>
+          <div><strong>PostgreSQL</strong><span>Relationale Daten für Profile, Module, Beiträge und Matching</span></div>
+          <div><strong>Supabase Auth</strong><span>Konten, Sitzungen und Prüfung der Hochschul-Mail</span></div>
+          <div><strong>Storage</strong><span>Dateiuploads mit kontrolliertem Zugriff statt öffentlicher Ablage</span></div>
+          <div><strong>Serverless API</strong><span>KI-Schlüssel bleibt außerhalb des Browsers geschützt</span></div>
         </div>
         <div class="case-copy wide">
-          <p>Bereits umgesetzt sind Nutzerkonten mit TH-Mail-Prüfung, Profile, Modul-Hubs, Datei-Uploads, Peer-Matching, Mentorenanfragen, Forum, Benachrichtigungen, Gastzugang und ein serverseitig angebundener KI-Assistent.</p>
-          <p>Der nächste Schritt ist ein kleiner Pilot mit echten Studierenden der Technischen Informatik. Dabei sollen Verständlichkeit, tatsächlicher Unterstützungsbedarf, Moderation und Datenschutz gemeinsam mit den Nutzer:innen weiterentwickelt werden.</p>
+          <p>Der Gastmodus trennt die öffentliche Demo von echten Nutzerkonten. Authentifizierung, Datenbank und Storage liegen in Supabase; die KI-Anfrage läuft über eine geschützte serverseitige Funktion.</p>
+          <p>Der nächste sinnvolle Schritt ist kein weiterer Feature-Ausbau, sondern ein kleiner Pilot: Nutzung beobachten, Matching-Qualität prüfen und Moderations- sowie Datenschutzregeln mit realen Studierenden validieren.</p>
         </div>
       </div>
     </section>
@@ -90,11 +90,11 @@
       <div class="container case-grid two">
         <div>
           <div class="section-tag">Meine Rolle</div>
-          <h2 class="section-title">Produktdenken, Entwicklung und <em>Reflexion</em>.</h2>
+          <h2 class="section-title">Konzept, UX und Technik <em>in einer Verantwortung</em>.</h2>
         </div>
         <div class="case-copy">
-          <p>Ich habe das Problem aus meiner eigenen Studienerfahrung abgeleitet, das Produktkonzept entwickelt, die Nutzeroberfläche gestaltet und den technischen Prototyp umgesetzt.</p>
-          <p>Dabei habe ich gelernt, nicht nur Funktionen zu programmieren, sondern Verantwortung für Nutzerführung, Sicherheit, Moderation und die Grenzen von KI in Bildungskontexten mitzudenken.</p>
+          <p>Ich habe Problemdefinition, Informationsarchitektur, UI, Datenmodell und Implementierung übernommen. Dazu gehörten auch Gastzugang, sichere API-Anbindung und die technische Vorbereitung der Live-Demo.</p>
+          <p>Bewusst offen bleiben Pilotbetrieb, Moderationsprozesse und die Evaluation des Matchings. Diese Punkte werden nicht als „fertig“ dargestellt, sondern als nächste Produktentscheidungen.</p>
         </div>
       </div>
     </section>
