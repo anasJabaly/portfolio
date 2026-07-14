@@ -434,6 +434,7 @@ ul { list-style: none; }
    FEATURED PROJECTS (Startseite)
    ============================================================ */
 .feat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.feat-grid-single { grid-template-columns: minmax(0, 760px); }
 @media (max-width: 720px) { .feat-grid { grid-template-columns: 1fr; } }
 
 .feat-card {
@@ -1273,12 +1274,18 @@ textarea:focus-visible {
 .case-metrics div { padding: 24px; border: 1px solid var(--border); border-radius: 16px; background: rgba(255,255,255,.65); }
 .case-metrics strong { display: block; color: var(--blue-deep); font: 600 1.05rem var(--font-body); margin-bottom: 8px; }
 .case-metrics span { color: var(--text-soft); font-size: .84rem; }
+.case-gallery { display: grid; grid-template-columns: 1.2fr .8fr; gap: 18px; margin-top: 38px; }
+.case-gallery figure { margin: 0; min-height: 280px; overflow: hidden; border: 1px solid var(--border); border-radius: 18px; background: #fff; box-shadow: var(--shadow-sm); }
+.case-gallery figure:first-child { grid-row: span 2; }
+.case-gallery img { width: 100%; height: 100%; min-height: 280px; display: block; object-fit: cover; }
+.case-gallery figcaption { padding: 12px 16px; color: var(--text-soft); font-size: .8rem; }
 @media (max-width: 900px) {
   .case-grid.two, .case-feature-grid, .case-metrics { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 640px) {
   .connect-main { padding: 34px 14px; }
   .connect-card { border-radius: 22px; }
-  .case-grid.two, .case-feature-grid, .case-metrics { grid-template-columns: 1fr; }
+  .case-grid.two, .case-feature-grid, .case-metrics, .case-gallery { grid-template-columns: 1fr; }
+  .case-gallery figure:first-child { grid-row: auto; }
   .case-hero { padding-top: 64px; }
 }
