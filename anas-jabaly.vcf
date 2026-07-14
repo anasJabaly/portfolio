@@ -2,11 +2,10 @@ BEGIN:VCARD
 VERSION:3.0
 N:Jabaly;Anas;;;
 FN:Anas Jabaly
-TITLE:Informatikstudent und Softwareentwickler
-ORG:PeerLearn TH
+TITLE:Informatikstudent und Full-Stack-orientierter Webentwickler
 EMAIL;TYPE=INTERNET,WORK:kontakt@anas-jabaly.de
 URL:https://anas-jabaly.de/
 URL;TYPE=LinkedIn:https://www.linkedin.com/in/anas-jabaly
 URL;TYPE=GitHub:https://github.com/anasJabaly
-NOTE:Entwickler von PeerLearn TH - digitale Lösungen für Lernen, Web und KI.
+NOTE:Full-Stack-orientierte Webentwicklung. Entwickler von PeerLearn TH.
 END:VCARD

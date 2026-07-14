@@ -22,7 +22,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="css/style.css?v=20260714-2">
+  <link rel="stylesheet" href="css/style.css?v=20260714-3">
 </head>
 <body>
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
@@ -115,8 +115,8 @@
           <div class="lbl">Kundenprojekt Ende-zu-Ende</div>
         </div>
         <div class="stat-cell">
-          <div class="num brown">End-to-End</div>
-          <div class="lbl">Frontend · Daten · Betrieb</div>
+          <div class="num brown">3</div>
+          <div class="lbl">Ebenen: Frontend · Daten · Betrieb</div>
         </div>
       </div>
     </div>
@@ -152,103 +152,6 @@
     </div>
   </section>
 
-  <!-- BEWERTUNGEN / REZENSIONEN -->
-  <section class="section reveal" id="bewertungen" hidden>
-    <div class="container">
-      <div class="section-tag">Stimmen</div>
-      <h2 class="section-title">Stimmen zur <em>Zusammenarbeit</em>.</h2>
-      <p class="section-lead lead-spaced">
-        Ehrliche Rückmeldungen aus echten Projekten — transparent und ungefiltert.
-      </p>
-
-      <!-- ANZEIGE DER BEWERTUNGEN
-           Neue Bewertungen als <div class="review-card">...</div> in .reviews-grid einfügen
-           und den .reviews-empty Block entfernen.
-      -->
-      <div class="reviews-empty">
-        <p>Die ersten Projektbewertungen werden aktuell eingeholt und erscheinen in Kürze an dieser Stelle.</p>
-        <p class="reviews-empty-sub">Du hast bereits mit mir gearbeitet? Dann freue ich mich über deine Rückmeldung.</p>
-      </div>
-      <div class="reviews-grid"></div>
-
-      <!-- TOGGLE: Bewertung abgeben -->
-      <div class="review-cta-wrap">
-        <button type="button" class="btn btn-ghost" id="reviewToggle">
-          Eigene Bewertung abgeben <span class="arrow">↓</span>
-        </button>
-      </div>
-
-      <!-- FORMULAR -->
-      <div class="review-form-wrap" id="reviewFormWrap">
-        <h3>Deine Bewertung</h3>
-        <p class="sub">Wir haben zusammen gearbeitet? Erzähl mir deine Erfahrung — sie hilft anderen, mich besser einzuschätzen.</p>
-
-        <form id="reviewForm" action="#" method="POST">
-          <!-- Web3Forms Konfiguration -->
-          <input type="hidden" name="access_key" value="">
-          <input type="hidden" name="subject" value="Neue Bewertung über Portfolio anas-jabaly.de">
-          <input type="hidden" name="redirect" value="false">
-          <input type="checkbox" name="botcheck" style="display:none;">
-
-          <div class="form-row">
-            <label for="rev-name">Dein Name *</label>
-            <input type="text" id="rev-name" name="Name" placeholder="Max Mustermann" required>
-          </div>
-
-          <div class="form-row">
-            <label for="rev-role">Position / Firma (optional)</label>
-            <input type="text" id="rev-role" name="Position" placeholder="z.B. Geschäftsführer · Mustermann GmbH">
-          </div>
-
-          <div class="form-row">
-            <label for="rev-project">Für welches Projekt? *</label>
-            <select id="rev-project" name="Projekt" required>
-              <option value="">— Bitte auswählen —</option>
-              <option value="Campingbox Germany">Campingbox Germany (WooCommerce-Shop)</option>
-              <option value="PeerLearn TH">PeerLearn TH (Lernplattform)</option>
-              <option value="Quantenphilosophie">Quantenphilosophie (Editorial Site)</option>
-              <option value="Allgemein / anderes Projekt">Allgemein / anderes Projekt</option>
-            </select>
-          </div>
-
-          <div class="form-row">
-            <label>Bewertung *</label>
-            <div class="star-picker">
-              <input type="radio" id="rev-s5" name="Bewertung" value="5" checked><label for="rev-s5">★</label>
-              <input type="radio" id="rev-s4" name="Bewertung" value="4"><label for="rev-s4">★</label>
-              <input type="radio" id="rev-s3" name="Bewertung" value="3"><label for="rev-s3">★</label>
-              <input type="radio" id="rev-s2" name="Bewertung" value="2"><label for="rev-s2">★</label>
-              <input type="radio" id="rev-s1" name="Bewertung" value="1"><label for="rev-s1">★</label>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <label for="rev-email">Deine E-Mail (wird nicht veröffentlicht) *</label>
-            <input type="email" id="rev-email" name="Email" placeholder="dein@email.de" required>
-          </div>
-
-          <div class="form-row">
-            <label for="rev-text">Deine Erfahrung *</label>
-            <textarea id="rev-text" name="Bewertung_Text" placeholder="Wie war die Zusammenarbeit? Was hat dir gefallen?" required></textarea>
-          </div>
-
-          <p class="form-privacy">
-            Mit dem Absenden erklärst du dich einverstanden, dass deine Angaben zur Bearbeitung deiner Bewertung
-            verarbeitet werden. Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.
-          </p>
-
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Bewertung absenden <span class="arrow">→</span></button>
-            <button type="button" class="btn btn-ghost" id="reviewCancel">Abbrechen</button>
-          </div>
-
-          <div class="form-msg" id="reviewMsg"></div>
-        </form>
-      </div>
-
-    </div>
-  </section>
-
   <!-- KONTAKT -->
   <section class="section contact" id="kontakt">
     <div class="container">
@@ -280,6 +183,6 @@
     </div>
   </footer>
 
-  <script src="js/script.js?v=20260713-1"></script>
+  <script src="js/script.js?v=20260714-3"></script>
 </body>
 </html>
