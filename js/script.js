@@ -243,10 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       const caseObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            caseObserver.unobserve(entry.target);
-          }
+          entry.target.classList.toggle('is-visible', entry.isIntersecting);
         });
       }, { rootMargin: '0px 0px -9% 0px', threshold: 0.12 });
       caseRevealEls.forEach((el) => caseObserver.observe(el));

@@ -1418,6 +1418,10 @@ textarea:focus-visible {
   transform: translate3d(0, 0, 0) scale(1);
   filter: blur(0);
 }
+/* Beim Ausblenden (Hochscrollen) keine Staffel-Verzögerung — wirkt ruhiger */
+.case-page.motion-ready .case-reveal:not(.is-visible) {
+  transition-delay: 0ms;
+}
 
 .case-page .section-tag::before {
   transform-origin: left center;
