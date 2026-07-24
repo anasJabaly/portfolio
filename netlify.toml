@@ -39,6 +39,17 @@
   to = "/datenschutz.html"
   status = 200
 
+
+[[redirects]]
+  from = "/produkte"
+  to = "/produkte.html"
+  status = 200
+
+[[redirects]]
+  from = "/fokus-datenschutz"
+  to = "/fokus-datenschutz.html"
+  status = 200
+
 # Security-Headers
 [[headers]]
   for = "/*"

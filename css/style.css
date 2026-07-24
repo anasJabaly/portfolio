@@ -1858,3 +1858,13 @@ textarea:focus-visible {
     filter: none;
   }
 }
+
+/* ============================================================
+   PRODUKTE: "Bald verfügbar"-Button
+   ============================================================ */
+.btn-soon {
+  opacity: 0.55;
+  cursor: default;
+  pointer-events: none;
+  border-style: dashed !important;
+}
