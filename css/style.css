@@ -1864,11 +1864,15 @@ textarea:focus-visible {
 }
 
 /* ============================================================
-   PRODUKTE: "Bald verfügbar"-Button
+   PRODUKTE: Chrome-Web-Store-Button (live)
    ============================================================ */
-.btn-soon {
-  opacity: 0.55;
-  cursor: default;
-  pointer-events: none;
-  border-style: dashed !important;
+.btn-store {
+  background: var(--blue-deep, #4d7d97);
+  color: #fff;
+  border: 1.5px solid var(--blue-deep, #4d7d97);
+}
+.btn-store:hover {
+  background: #3d6a82;
+  border-color: #3d6a82;
+  transform: translateY(-2px);
 }
