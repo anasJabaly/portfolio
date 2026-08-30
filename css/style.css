@@ -1706,7 +1706,10 @@ textarea:focus-visible {
 .home-page .hero-title,
 .home-page .hero-tagline,
 .home-page .hero-cta {
-  animation-timing-function: cubic-bezier(.2,.75,.25,1);
+  animation: none;
+}
+.home-page .hero-content {
+  animation: homeHeroGroupIn .9s .06s cubic-bezier(.2,.75,.25,1) both;
 }
 
 .home-page.home-motion-ready .home-reveal {
@@ -1725,6 +1728,24 @@ textarea:focus-visible {
   transform: translate3d(0, 0, 0) scale(1);
   filter: blur(0);
 }
+
+/* Der erste Inhaltsabschnitt bleibt beim Laden vollständig verborgen.
+   Erst nach dem ersten Scrollen wird er als zusammengehöriger Block sichtbar. */
+.home-page.home-motion-ready .home-scroll-section {
+  opacity: 0;
+  transform: translate3d(0, 46px, 0) scale(.99);
+  filter: blur(5px);
+  transition:
+    opacity .85s cubic-bezier(.2,.75,.25,1),
+    transform .85s cubic-bezier(.2,.75,.25,1),
+    filter .85s cubic-bezier(.2,.75,.25,1);
+  will-change: opacity, transform;
+}
+.home-page.home-motion-ready .home-scroll-section.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  filter: blur(0);
+}
 .home-page.home-motion-ready .section-tag.home-reveal:not(.is-visible)::before {
   transform: scaleX(0);
 }
@@ -1739,7 +1760,8 @@ textarea:focus-visible {
   background-size: 0 .22em;
   transition: background-size .85s .2s cubic-bezier(.2,.75,.25,1);
 }
-.home-page .section-title.is-visible em { background-size: 100% .22em; }
+.home-page .section-title.is-visible em,
+.home-page .home-scroll-section.is-visible .section-title em { background-size: 100% .22em; }
 
 .home-page .ov-card,
 .home-page .stat-cell,
@@ -1838,6 +1860,10 @@ textarea:focus-visible {
 
 @keyframes homeLineIn { to { transform: scaleX(1); } }
 @keyframes homeOrbit { to { transform: rotate(360deg); } }
+@keyframes homeHeroGroupIn {
+  from { opacity: 0; transform: translate3d(0, 28px, 0); filter: blur(5px); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); filter: blur(0); }
+}
 
 @media (max-width: 720px) {
   .home-page .hero { min-height: auto; }
@@ -1853,10 +1879,13 @@ textarea:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .home-progress { display: none; }
   .home-page .hero::after,
-  .home-page .hero-title em::after { animation: none !important; }
+  .home-page .hero-title em::after,
+  .home-page .hero-content { animation: none !important; }
   .home-page .hero .container { transform: none; }
   .home-page.home-motion-ready .home-reveal,
-  .home-page.home-motion-ready .home-reveal.is-visible {
+  .home-page.home-motion-ready .home-reveal.is-visible,
+  .home-page.home-motion-ready .home-scroll-section,
+  .home-page.home-motion-ready .home-scroll-section.is-visible {
     opacity: 1;
     transform: none;
     filter: none;

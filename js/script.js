@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (homePage) {
     const nav = document.querySelector('.nav');
     const hero = document.querySelector('.hero');
+    const overviewSection = document.querySelector('.home-scroll-section');
 
     // Dezenter Lesefortschritt, passend zu den Case Studies.
     const progress = document.createElement('div');
@@ -104,6 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const homeRevealEls = [];
     revealGroups.forEach((selector) => {
       document.querySelectorAll(selector).forEach((el, index) => {
+        // Der Schwerpunkte-Abschnitt wird als kompletter Block eingeblendet.
+        if (el.closest('.home-scroll-section')) return;
         el.classList.add('home-reveal');
         const stagger = el.matches('.ov-card, .stat-cell') ? (index % 4) * 90 : 0;
         el.style.setProperty('--home-reveal-delay', `${stagger}ms`);
@@ -111,6 +114,38 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
     document.body.classList.add('home-motion-ready');
+
+    // Verhindert den isolierten Abschnittstitel am unteren Fensterrand:
+    // Der gesamte Block wird erst nach einer bewussten Scrollbewegung sichtbar.
+    if (overviewSection) {
+      if (!('IntersectionObserver' in window) || reduceMotion) {
+        overviewSection.classList.add('is-visible');
+      } else {
+        let overviewObserver;
+        const showOverview = () => {
+          overviewSection.classList.add('is-visible');
+          overviewObserver?.unobserve(overviewSection);
+          window.removeEventListener('scroll', revealOverviewAfterScroll);
+        };
+        const revealOverviewAfterScroll = () => {
+          if (window.scrollY <= 16) return;
+          const rect = overviewSection.getBoundingClientRect();
+          if (rect.top < window.innerHeight * 0.82 && rect.bottom > 0) {
+            showOverview();
+          }
+        };
+
+        overviewObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && window.scrollY > 16) showOverview();
+          });
+        }, { rootMargin: '0px 0px -18% 0px', threshold: 0.08 });
+
+        overviewObserver.observe(overviewSection);
+        window.addEventListener('scroll', revealOverviewAfterScroll, { passive: true });
+        revealOverviewAfterScroll();
+      }
+    }
 
     const animateNumber = (element) => {
       if (element.dataset.counted === 'true') return;
