@@ -1905,3 +1905,60 @@ textarea:focus-visible {
   border-color: #3d6a82;
   transform: translateY(-2px);
 }
+
+/* October 2026: shared progressive GSAP motion and selected projects. */
+.reveal, .reveal.visible { opacity: 1; transform: none; transition: none; }
+html { scroll-padding-top: 100px; }
+.scroll-progress { position: fixed; inset: 0 0 auto; height: 3px; z-index: 2000; pointer-events: none; }
+.scroll-progress span { display: block; width: 100%; height: 100%; transform: scaleX(0); transform-origin: left; background: linear-gradient(90deg, var(--blue-deep), var(--brown)); }
+.scroll-hint { display: inline-flex; align-items: center; gap: 18px; margin-top: 36px; color: var(--blue-deep); font-size: .85rem; }
+.scroll-hint span { display: inline-block; font-size: 1.4rem; }
+.featured-layout { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.4fr); gap: clamp(32px, 5vw, 80px); align-items: start; }
+.featured-intro { align-self: start; }
+.featured-intro .btn { margin-top: 28px; }
+.featured-list { min-width: 0; display: grid; gap: 52px; }
+.featured-project { border: 1px solid var(--border); border-radius: 18px; background: var(--white); overflow: hidden; }
+.featured-art { min-height: 220px; padding: 24px 30px; display: flex; flex-direction: column; justify-content: space-between; background: linear-gradient(135deg, #dbe8ef, #b9d3e0); color: #365a6e; }
+.featured-art strong { font: 500 clamp(3rem, 7vw, 5rem) var(--font-display); letter-spacing: -.06em; }
+.featured-art span { font-size: .75rem; letter-spacing: .04em; }
+.featured-project:nth-child(2) .featured-art { background: linear-gradient(135deg, #eadfd3, #d4baa3); color: #67472e; }
+.featured-project:nth-child(3) .featured-art { background: linear-gradient(135deg, #e6e5db, #cfdbcf); color: #465d4c; }
+.featured-copy { padding: 30px; }
+.featured-copy h3 { font: 500 1.65rem var(--font-display); margin: 0 0 24px; }
+.project-story { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 12px 16px; margin: 18px 0 24px; font-size: .9rem; line-height: 1.7; }
+.project-story dt { color: var(--blue-deep); font-weight: 600; font-size: .78rem; padding-top: 2px; }
+.project-story dd { margin: 0; }
+.proj-content .actions { margin-top: 18px; }
+.timeline::before { opacity: .25; }
+.timeline::after { content: ''; position: absolute; left: 11px; top: 14px; bottom: 14px; width: 2px; background: var(--blue-deep); transform: scaleY(var(--timeline-progress, 1)); transform-origin: top; }
+.tl-card { transition: box-shadow .25s; }
+[hidden] { display: none !important; }
+@media (max-width: 1023px), (max-height: 649px) {
+  .featured-layout { grid-template-columns: minmax(0, 1fr); }
+  .featured-intro { max-width: 640px; }
+}
+@media (max-width: 540px) {
+  .featured-copy { padding: 24px 20px; }
+  .featured-art { min-height: 180px; padding: 20px; }
+  .project-story { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .project-story dd { margin-bottom: 12px; }
+  .skill-box li { flex-wrap: wrap; gap: 5px 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* Collapsed mobile links are also removed from keyboard navigation. */
+@media (max-width: 720px) {
+  .js-ready .nav-links { visibility: hidden; }
+  .js-ready .nav-links.open { visibility: visible; }
+  body:not(.js-ready) .nav-toggle { display: none; }
+  body:not(.js-ready) .nav-links { position: static; opacity: 1; transform: none; pointer-events: auto; }
+  body:not(.js-ready) .nav-inner { flex-wrap: wrap; }
+}
+.tl-card { overflow-wrap: anywhere; }
+@media (max-width: 540px) {
+  .tl-entry { padding-left: 34px; }
+  .tl-card { padding: 22px 18px; }
+}
