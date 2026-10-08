@@ -22,7 +22,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="css/style.css?v=20261006">
+  <link rel="stylesheet" href="css/style.css?v=20261008b">
 </head>
 <body class="home-page">
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
@@ -48,7 +48,7 @@
 
   <!-- HERO -->
   <header class="hero" id="main">
-    <div class="container">
+    <div class="container hero-layout">
       <div class="hero-content">
         <div class="hero-meta">
           <span class="pill"><span class="blink"></span> Offen für Werkstudentenstellen &amp; Praxissemester</span>
@@ -61,7 +61,7 @@
         </h1>
 
         <p class="hero-tagline">
-          Ich studiere Technische Informatik und entwickle Software mit Schwerpunkt auf Java und Webtechnologien. In Hochschulprojekten, in der Lehre und in eigenen Praxisprojekten vertiefe ich mein Wissen und setze Ideen in funktionierende Anwendungen um.
+          Ich studiere Technische Informatik an der TH Köln. Mit Java, C und Webtechnologien baue ich Anwendungen — und begleite als studentische Hilfskraft andere beim Lernen und Entwickeln.
         </p>
 
         <div class="hero-cta">
@@ -70,8 +70,20 @@
         </div>
         <a class="scroll-hint" href="#schwerpunkte">Weiter entdecken <span aria-hidden="true">↓</span></a>
       </div>
+      <figure class="hero-portrait">
+        <div class="portrait-frame"><img class="portrait-image" src="img/anas-portrait-natuerlich-960.webp" srcset="img/anas-portrait-natuerlich-480.webp 480w, img/anas-portrait-natuerlich-960.webp 960w" sizes="(max-width: 800px) 88vw, 38vw" width="960" height="960" alt="Anas Jabaly" fetchpriority="high" decoding="async"></div>
+        <figcaption><span>Software entwickeln.<br>Wissen weitergeben.</span><span class="portrait-index">AJ / 2026</span></figcaption>
+      </figure>
     </div>
   </header>
+
+  <section class="approach-section" aria-labelledby="approach-title">
+    <div class="container approach-layout">
+      <div class="section-tag">Mein Ansatz</div>
+      <h2 class="approach-title" id="approach-title"><span>Verstehen, was gebraucht wird.</span><span>Eine Lösung entwickeln.</span><span>Gemeinsam weiterkommen.</span></h2>
+      <p>So verbinde ich eigene Projekte, Softwareentwicklung im Team und die Arbeit mit Studierenden.</p>
+    </div>
+  </section>
 
   <!-- KURZ-ÜBERBLICK -->
   <section class="section home-scroll-section" id="schwerpunkte">
@@ -107,29 +119,42 @@
     <div class="container">
       <div class="stat-strip">
         <div class="stat-cell">
-          <div class="num">1,7</div>
+          <div class="num" aria-label="1,7"><span data-count="1.7" data-decimals="1" aria-hidden="true">1,7</span></div>
           <div class="lbl">Notenschnitt</div>
         </div>
         <div class="stat-cell">
-          <div class="num brown">3</div>
+          <div class="num brown" aria-label="3"><span data-count="3" aria-hidden="true">3</span></div>
           <div class="lbl">öffentliche Webprojekte</div>
         </div>
         <div class="stat-cell">
-          <div class="num">2</div>
-          <div class="lbl">Lehrtätigkeiten · Java &amp; C</div>
+          <div class="num" aria-label="3"><span data-count="3" aria-hidden="true">3</span></div>
+          <div class="lbl">SHK-Stellen · PI2, PP &amp; BVS1</div>
         </div>
         <div class="stat-cell">
-          <div class="num brown">3</div>
+          <div class="num brown" aria-label="3"><span data-count="3" aria-hidden="true">3</span></div>
           <div class="lbl">Schwerpunkte: Java · Web · Daten</div>
         </div>
       </div>
     </div>
   </section>
 
+  <section class="section teaching-section" aria-labelledby="teaching-title">
+    <div class="container">
+      <div class="section-tag">Studium &amp; Lehre</div>
+      <h2 class="section-title" id="teaching-title">Wissen wächst,<br>wenn man es <em>weitergibt.</em></h2>
+      <div class="teaching-path">
+        <a href="werdegang.html" class="teaching-stop"><span class="teaching-date">März — Juli 2026</span><h3>Praktische Informatik 2</h3><p>Java, Code-Reviews und Unterstützung im Laborpraktikum.</p></a>
+        <a href="werdegang.html" class="teaching-stop"><span class="teaching-date">Okt. 2026 — Feb. 2027</span><h3>Programmierpraktikum</h3><p>Studierende bei Java, C, Debugging und Testing begleiten.</p></a>
+        <a href="werdegang.html#bvs1" class="teaching-stop"><span class="teaching-date">Seit Oktober 2026 · 8 Std./Woche</span><h3>BVS1</h3><p>Gemeinsam mit Studierenden ein kleines Betriebssystem zu Lernzwecken entwickeln.</p></a>
+      </div>
+      <a class="proj-link" href="werdegang.html">Den gesamten Werdegang ansehen →</a>
+    </div>
+  </section>
+
   <section class="section featured-section" id="ausgewaehlte-projekte">
     <div class="container featured-layout">
-      <div class="featured-intro"><div class="section-tag">Ausgewählte Projekte</div><h2 class="section-title">Ideen werden<br><em>Anwendungen.</em></h2><p class="section-lead">Drei Einblicke in meine Arbeit: Produktentwicklung, ein veröffentlichtes Tool und Softwareentwicklung im Team.</p><a href="projekte.html" class="btn btn-ghost">Alle Projekte →</a></div>
-      <div class="featured-list"><article class="featured-project"><div class="featured-art" aria-hidden="true"><span>01 / 03</span><strong>PL</strong><span>JavaScript · Supabase · PostgreSQL</span></div><div class="featured-copy"><h3>PeerLearn TH</h3><dl class="project-story"><dt>Problem</dt><dd>Lernmaterialien und passende Ansprechpartner:innen waren über private Gruppen verteilt.</dd><dt>Mein Beitrag</dt><dd>Konzept, Oberfläche und Full-Stack-Implementierung mit Matching, Modul-Hubs, Forum, Authentifizierung und KI-Anbindung.</dd><dt>Ergebnis</dt><dd>Nutzbarer Pilotprototyp; bestätigte Einreichung zum Studienpreis der TH Köln 2026 und Posterwalk.</dd></dl><a class="proj-link" href="peerlearn.html">Projekt entdecken →</a></div></article><article class="featured-project"><div class="featured-art" aria-hidden="true"><span>02 / 03</span><strong>FY</strong><span>JavaScript · Browser Extension</span></div><div class="featured-copy"><h3>Fokus für YouTube</h3><dl class="project-story"><dt>Problem</dt><dd>Shorts und Unterhaltung lenken auf YouTube vom eigentlichen Lernziel ab.</dd><dt>Mein Beitrag</dt><dd>Entwicklung einer Browser-Erweiterung mit konfigurierbaren Filtern für einen fokussierten Feed.</dd><dt>Ergebnis</dt><dd>Open-Source-Erweiterung, veröffentlicht im Chrome Web Store.</dd></dl><a class="proj-link" href="produkte.html">Projekt entdecken →</a></div></article><article class="featured-project"><div class="featured-art" aria-hidden="true"><span>03 / 03</span><strong>W4</strong><span>Java · JPA · JUnit · JavaFX</span></div><div class="featured-copy"><h3>SWP / WAWI4</h3><dl class="project-story"><dt>Problem</dt><dd>Ein modulares Warenwirtschaftssystem sollte im Softwarepraktikum gemeinsam umgesetzt werden.</dd><dt>Mein Beitrag</dt><dd>Lieferanten-CRUD inklusive Tests sowie Beiträge zu GUI, Steuerung und Integration im vierköpfigen Team.</dd><dt>Ergebnis</dt><dd>Implementierte und getestete Komponenten; Zusammenarbeit über Issues, Branches und Merge Requests.</dd></dl><a class="proj-link" href="projekte.html#wawi4">Projekt entdecken →</a></div></article></div>
+      <div class="featured-intro"><div class="section-tag">Ausgewählte Projekte</div><h2 class="section-title">Ideen werden<br><em>Anwendungen.</em></h2><p class="section-lead">Drei Einblicke in meine Arbeit: Produktentwicklung, ein veröffentlichtes Tool und Softwareentwicklung im Team.</p><nav class="project-index" aria-label="Ausgewählte Projekte"><a href="#projekt-peerlearn"><span>01</span>PeerLearn TH</a><a href="#projekt-fokus"><span>02</span>Fokus für YouTube</a><a href="#projekt-wawi4"><span>03</span>SWP / WAWI4</a></nav><a href="projekte.html" class="btn btn-ghost">Alle Projekte →</a></div>
+      <div class="featured-list"><article class="featured-project" id="projekt-peerlearn"><figure class="project-media project-media-peerlearn"><div class="project-window"><img src="img/projects/peerlearn.webp" width="1180" height="732" alt="Startseite von PeerLearn TH mit Vorschau der Lernplattform" loading="lazy" decoding="async"></div><figcaption><span>01 / 03</span><span>Originalansicht · PeerLearn TH</span></figcaption></figure><div class="featured-copy"><h3>PeerLearn TH</h3><dl class="project-story"><dt>Problem</dt><dd>Lernmaterialien und passende Ansprechpartner:innen waren über private Gruppen verteilt.</dd><dt>Mein Beitrag</dt><dd>Konzept, Oberfläche und Full-Stack-Implementierung mit Matching, Modul-Hubs, Forum, Authentifizierung und KI-Anbindung.</dd><dt>Ergebnis</dt><dd>Nutzbarer Pilotprototyp; bestätigte Einreichung zum Studienpreis der TH Köln 2026 und Posterwalk.</dd></dl><a class="proj-link" href="peerlearn.html">Projekt entdecken →</a></div></article><article class="featured-project" id="projekt-fokus"><figure class="project-media project-media-fokus"><div class="project-window"><img src="img/projects/fokus.webp" width="320" height="700" alt="Einstellungen der Browser-Erweiterung Fokus für YouTube" loading="lazy" decoding="async"></div><figcaption><span>02 / 03</span><span>Originalansicht · Fokus für YouTube</span></figcaption></figure><div class="featured-copy"><h3>Fokus für YouTube</h3><dl class="project-story"><dt>Problem</dt><dd>Shorts und Unterhaltung lenken auf YouTube vom eigentlichen Lernziel ab.</dd><dt>Mein Beitrag</dt><dd>Entwicklung einer Browser-Erweiterung mit konfigurierbaren Filtern für einen fokussierten Feed.</dd><dt>Ergebnis</dt><dd>Open-Source-Erweiterung, veröffentlicht im Chrome Web Store.</dd></dl><a class="proj-link" href="produkte.html">Projekt entdecken →</a></div></article><article class="featured-project" id="projekt-wawi4"><figure class="project-media project-media-wawi4"><div class="project-window"><img src="img/projects/wawi4.svg" width="1000" height="600" alt="Grafik: Lieferanten anlegen, lesen, ändern und löschen mit Tests und Integration" loading="lazy" decoding="async"></div><figcaption><span>03 / 03</span><span>Projektgrafik · Lieferanten-CRUD</span></figcaption></figure><div class="featured-copy"><h3>SWP / WAWI4</h3><dl class="project-story"><dt>Problem</dt><dd>Ein modulares Warenwirtschaftssystem sollte im Softwarepraktikum gemeinsam umgesetzt werden.</dd><dt>Mein Beitrag</dt><dd>Lieferanten-CRUD inklusive Tests sowie Beiträge zu GUI, Steuerung und Integration im vierköpfigen Team.</dd><dt>Ergebnis</dt><dd>Implementierte und getestete Komponenten; Zusammenarbeit über Issues, Branches und Merge Requests.</dd></dl><a class="proj-link" href="projekte.html#wawi4">Projekt entdecken →</a></div></article></div>
     </div>
   </section>
 
@@ -167,6 +192,6 @@
 
   <script defer src="js/vendor/gsap.min.js"></script>
   <script defer src="js/vendor/ScrollTrigger.min.js"></script>
-  <script defer src="js/script.js?v=20261006"></script>
+  <script defer src="js/script.js?v=20261008b"></script>
 </body>
 </html>
