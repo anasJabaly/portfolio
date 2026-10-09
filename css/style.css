@@ -1987,7 +1987,7 @@ html { scroll-padding-top: 100px; }
 .home-page .hero-meta { flex-wrap: wrap; font-size: .67rem; letter-spacing: .025em; }
 .hero-portrait { margin: 0; min-width: 0; }
 .portrait-frame { border-radius: 140px 140px 20px 20px; overflow: hidden; background: #d7d9df; aspect-ratio: 4 / 5; border: 1px solid rgba(77,125,151,.2); }
-.portrait-image { width: 100%; height: 100%; display: block; object-fit: cover; object-position: 52% center; }
+.portrait-image { width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% center; }
 .hero-portrait figcaption { display: flex; justify-content: space-between; gap: 16px; padding: 20px 4px; font-size: .83rem; color: var(--text-soft); }
 .portrait-index { font: .68rem var(--font-mono); color: var(--blue-deep); }
 .home-page .hero-experience { background: transparent; padding-left: 0; border: 0; border-top: 1px solid var(--border); border-radius: 0; width: 100%; font-size: .77rem; }
