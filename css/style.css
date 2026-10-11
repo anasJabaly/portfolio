@@ -2030,7 +2030,7 @@ html { scroll-padding-top: 100px; }
   .teaching-path { grid-template-columns: minmax(0,1fr); gap: 16px; }
   .teaching-stop { border-top: 0; border-left: 2px solid var(--border); padding: 4px 0 22px 24px; }
   .teaching-stop::before { top: 9px; left: -6px; }
-  .project-index { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .project-index { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .project-index a { align-items: start; flex-direction: column; font-size: .75rem; gap: 8px; padding: 10px; }
 }
 @media (max-width: 540px) {
