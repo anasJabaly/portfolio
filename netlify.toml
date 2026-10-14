@@ -82,3 +82,15 @@
   for = "/img/*"
   [headers.values]
     Cache-Control = "public, max-age=2592000"
+
+[[redirects]]
+  from = "/psso-modern"
+  to = "/psso-modern.html"
+  status = 200
+
+[[headers]]
+  for = "/downloads/*.user.js"
+  [headers.values]
+    Content-Type = "application/javascript; charset=utf-8"
+    Content-Disposition = "inline"
+    Cache-Control = "public, max-age=0, must-revalidate"

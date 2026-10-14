@@ -33,7 +33,7 @@ destination = ROOT / 'dist'
 # Copy only public site assets, never repository metadata, tests, or source tools.
 for file in ROOT.glob('*.html'):
     destination.mkdir(exist_ok=True); shutil.copy2(file, destination / file.name)
-for name in ['css', 'js', 'img']:
+for name in ['css', 'js', 'img', 'downloads']:
     shutil.copytree(ROOT / name, destination / name, dirs_exist_ok=True)
 for name in ['robots.txt', 'sitemap.xml', 'anas-jabaly.vcf', 'netlify.toml', 'vercel.json']:
     shutil.copy2(ROOT / name, destination / name)

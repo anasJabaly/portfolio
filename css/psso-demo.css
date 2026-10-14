@@ -1,0 +1,6 @@
+.demo-banner { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:8px 20px; padding:12px 20px; background:#fff4d4; color:#493714; font:14px/1.5 system-ui,sans-serif; }
+.demo-banner a { color:inherit; font-weight:700; }
+.demo-source { padding:30px; overflow:auto; font-family:system-ui,sans-serif; }
+.demo-source table { width:100%; border-collapse:collapse; }
+.demo-source td,.demo-source th { padding:10px; border:1px solid #ddd; text-align:left; }
+@media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto !important; transition:none !important; } }
