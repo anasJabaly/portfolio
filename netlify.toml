@@ -94,3 +94,8 @@
     Content-Type = "application/javascript; charset=utf-8"
     Content-Disposition = "inline"
     Cache-Control = "public, max-age=0, must-revalidate"
+
+[[redirects]]
+  from = "/psso-datenschutz"
+  to = "/psso-datenschutz.html"
+  status = 200

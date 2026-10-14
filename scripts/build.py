@@ -3,6 +3,8 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
 import shutil
+import subprocess
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 class Page(HTMLParser):
@@ -14,6 +16,7 @@ class Page(HTMLParser):
         for key in ('href', 'src'):
             if key in attrs: self.refs.append(attrs[key])
 
+subprocess.run([sys.executable, str(ROOT / 'scripts/package-psso-extension.py')], check=True)
 pages = {f: Page(f.read_text()) for f in ROOT.glob('*.html')}
 errors = []
 for file, page in pages.items():

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PSSO Modern · Anas Jabaly</title>
-  <meta name="description" content="PSSO Modern: ein kostenloses Tampermonkey-Userscript für den Notenspiegel der TH Köln. Suche, Filter, Sortierung und Dark Mode, lokal im Browser.">
+  <meta name="description" content="PSSO Modern: eine kostenlose Browser-Erweiterung für den Notenspiegel der TH Köln. Suche, Filter, Sortierung und Dark Mode, lokal im Browser.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -11,8 +11,8 @@
   <link rel="canonical" href="https://anas-jabaly.de/psso-modern.html">
   <meta property="og:type" content="website"><meta property="og:locale" content="de_DE"><meta property="og:title" content="PSSO Modern · Dein Notenspiegel, übersichtlich">
   <meta property="og:description" content="Module finden, Prüfungen filtern und Noten im Blick behalten. Kostenloses Userscript für PSSO an der TH Köln.">
-  <meta property="og:url" content="https://anas-jabaly.de/psso-modern.html"><meta property="og:image" content="https://anas-jabaly.de/img/products/psso-modern.webp">
-  <link rel="stylesheet" href="css/style.css?v=20261014">
+  <meta property="og:url" content="https://anas-jabaly.de/psso-modern.html"><meta property="og:image" content="https://anas-jabaly.de/img/products/psso-modern-extension.webp">
+  <link rel="stylesheet" href="css/style.css?v=20261014-ext1">
 </head>
 <body class="case-page product-page">
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
@@ -33,13 +33,13 @@
     </div>
   </nav>
   <header class="case-hero" id="main"><div class="container">
-    <div class="case-eyebrow"><span>PSSO Modern</span><span>·</span><span>Tampermonkey-Userscript</span><span>·</span><span>Kostenlos</span></div>
+    <div class="case-eyebrow"><span>PSSO Modern</span><span>·</span><span>Chrome-Erweiterung</span><span>·</span><span>Kostenlos</span></div>
     <h1>Dein Studium.<br><em>Auf einen Blick.</em></h1>
     <p>Der vorhandene PSSO-Notenspiegel der TH Köln wird zu einer ruhigen, durchsuchbaren Studienübersicht. Deine Noten bleiben die Angaben aus PSSO.</p>
-    <div class="hero-cta"><a href="downloads/psso-modern.user.js" target="_blank" rel="noopener" class="btn btn-primary">PSSO Modern installieren <span class="arrow">↗</span></a><a href="psso-demo.html" class="btn btn-ghost">Demo ausprobieren →</a></div>
-    <p class="product-note">Tampermonkey muss installiert sein. <a href="#installation">Zur kurzen Installationsanleitung ↓</a></p>
+    <div class="hero-cta"><a href="#installation" class="btn btn-primary">Installationsstatus <span class="arrow">↓</span></a><a href="psso-demo.html" class="btn btn-ghost">Demo ausprobieren →</a></div>
+    <p class="product-note">Eigenständige Erweiterung: kein Tampermonkey erforderlich. Die Store-Veröffentlichung wird vorbereitet. <a href="#installation">Zur kurzen Installationsanleitung ↓</a></p>
   </div></header>
-  <section class="section product-section"><div class="container"><figure class="product-preview"><img src="img/products/psso-modern.webp" width="1180" height="780" alt="PSSO Modern mit Studienübersicht, Suche und Modulfiltern – fiktive Beispieldaten" loading="lazy" decoding="async"><figcaption>Vorschau mit fiktiven Beispieldaten</figcaption></figure></div></section>
+  <section class="section product-section"><div class="container"><figure class="product-preview"><img src="img/products/psso-modern-extension.webp" width="1180" height="738" alt="PSSO Modern mit Studienübersicht, Suche und Modulfiltern – fiktive Beispieldaten" loading="lazy" decoding="async"><figcaption>Vorschau mit fiktiven Beispieldaten</figcaption></figure></div></section>
   <section class="section"><div class="container">
     <div class="section-tag">Im Studienalltag</div><h2 class="section-title">Weniger Suchen.<br><em>Mehr Überblick.</em></h2>
     <div class="case-feature-grid">
@@ -51,19 +51,18 @@
   </div></section>
   <section class="section case-soft" id="installation"><div class="container">
     <div class="section-tag">Installation</div><h2 class="section-title">Einmal einrichten.<br><em>Danach einfach öffnen.</em></h2>
+    <p class="section-lead">Die eigenständige Erweiterung ist für die Veröffentlichung vorbereitet. Der Installationslink erscheint hier, sobald sie im Chrome Web Store freigegeben ist.</p>
     <ol class="install-steps">
-      <li><h3>Tampermonkey installieren</h3><p>Falls du die Erweiterung noch nicht hast, <a href="https://www.tampermonkey.net/" target="_blank" rel="noopener">Tampermonkey für deinen Browser installieren ↗</a>.</p></li>
-      <li><h3>Userscripts zulassen</h3><p>In Chrome oder Edge die Tampermonkey-Erweiterungseinstellungen öffnen und „Userscripts zulassen“ aktivieren, falls der Schalter angezeigt wird. <a href="https://www.tampermonkey.net/faq.php?locale=de&amp;q=Q209" target="_blank" rel="noopener">Offizielle Anleitung ↗</a></p></li>
-      <li><h3>PSSO Modern hinzufügen</h3><p>Auf „PSSO Modern installieren“ klicken. Im Tampermonkey-Dialog den angezeigten Code prüfen und die Installation bestätigen.</p><a href="downloads/psso-modern.user.js" target="_blank" rel="noopener" class="btn btn-primary">PSSO Modern installieren <span class="arrow">↗</span></a></li>
-      <li><h3>Den Notenspiegel öffnen</h3><p>Wie gewohnt bei PSSO anmelden und den Notenspiegel öffnen oder neu laden. PSSO Modern erscheint, sobald die Modultabelle geladen ist.</p><a class="proj-link" href="https://psso.th-koeln.de/qisserver/" target="_blank" rel="noopener">PSSO öffnen ↗</a></li>
+      <li><h3>Im Web Store hinzufügen</h3><p>Nach Veröffentlichung auf „Zu Chrome hinzufügen“ klicken und den Zugriff auf PSSO sowie den lokalen Einstellungsspeicher bestätigen.</p><span class="product-release-status">Store-Veröffentlichung in Vorbereitung</span></li>
+      <li><h3>PSSO öffnen</h3><p>Wie gewohnt anmelden und den Notenspiegel öffnen oder neu laden. Die moderne Ansicht startet automatisch.</p><a class="proj-link" href="https://psso.th-koeln.de/qisserver/" target="_blank" rel="noopener">PSSO öffnen ↗</a></li>
     </ol>
-    <details class="product-faq"><summary>Der Installationsdialog öffnet sich nicht?</summary><p>Tampermonkey aktualisieren und prüfen, ob Userscripts zugelassen sind. Du kannst das Script alternativ kopieren, im Tampermonkey-Dashboard ein neues Script anlegen, den Inhalt ersetzen und speichern.</p><div class="hero-cta"><button type="button" class="btn btn-ghost" id="copy-psso-script" hidden data-script-src="downloads/psso-modern.user.js">Script kopieren</button><a class="proj-link" href="downloads/psso-modern.user.js" download>Scriptdatei herunterladen ↓</a></div><p id="copy-psso-status" role="status" aria-live="polite"></p></details>
+    <details class="product-faq"><summary>Ich habe bereits die frühere Userscript-Version</summary><p>Nach Installation der eigenständigen Erweiterung kannst du das bisherige PSSO-Modern-Script in Tampermonkey deaktivieren. Für die neue Erweiterung wird Tampermonkey nicht benötigt.</p></details>
   </div></section>
   <section class="section"><div class="container">
     <div class="section-tag">Daten &amp; Transparenz</div><h2 class="section-title">Deine Noten bleiben<br><em>in deinem Browser.</em></h2>
-    <div class="case-copy wide"><p>Das Script liest die bereits geladene PSSO-Seite und verarbeitet die Angaben lokal. Es enthält keine zusätzlichen Netzwerkanfragen, keine Analyse-Dienste und keine Übertragung deiner Noten oder Stammdaten an mich. Nur deine Hell-/Dunkel-Einstellung wird im lokalen Browser-Speicher hinterlegt.</p><p>PSSO Modern verändert die Darstellung. Es ändert keine Noten und meldet dich nicht automatisch zu Prüfungen an oder ab. PSSO und Tampermonkey haben eigene Funktionen und Datenschutzinformationen.</p><p>Unabhängiges studentisches Projekt von Anas Jabaly, kein offizielles Angebot der TH Köln. Bei Änderungen an der PSSO-Seite kann eine Anpassung des Scripts nötig werden.</p></div>
-    <div class="hero-cta"><a class="btn btn-ghost" href="downloads/psso-modern.user.js" target="_blank" rel="noopener">Quellcode ansehen ↗</a><a class="proj-link" href="mailto:kontakt@anas-jabaly.de?subject=PSSO%20Modern">Feedback geben →</a></div>
-    <p class="product-note">Version 2.0.1 · Für den PSSO-Notenspiegel unter psso.th-koeln.de/qisserver/</p>
+    <div class="case-copy wide"><p>Die Erweiterung liest die bereits geladene PSSO-Seite und verarbeitet die Angaben lokal. Es enthält keine zusätzlichen Netzwerkanfragen, keine Analyse-Dienste und keine Übertragung deiner Noten oder Stammdaten an mich. Nur deine Hell-/Dunkel-Einstellung wird im lokalen Erweiterungsspeicher hinterlegt.</p><p>PSSO Modern verändert die Darstellung. Es ändert keine Noten und meldet dich nicht automatisch zu Prüfungen an oder ab. PSSO und dein Browser haben eigene Funktionen und Datenschutzinformationen.</p><p>Unabhängiges studentisches Projekt von Anas Jabaly, kein offizielles Angebot der TH Köln. Bei Änderungen an der PSSO-Seite kann eine Anpassung der Erweiterung nötig werden.</p></div>
+    <div class="hero-cta"><a class="btn btn-ghost" href="downloads/psso-modern-extension.zip" download>Quellcode herunterladen ↓</a><a class="proj-link" href="psso-datenschutz.html">Datenschutz der Erweiterung →</a><a class="proj-link" href="mailto:kontakt@anas-jabaly.de?subject=PSSO%20Modern">Feedback geben →</a></div>
+    <p class="product-note">Erweiterungsversion 1.0.0 · Für den PSSO-Notenspiegel unter psso.th-koeln.de/qisserver/</p>
   </div></section>
   <footer class="footer">
     <div class="container">
@@ -77,6 +76,6 @@
   </footer>
   <script defer src="js/vendor/gsap.min.js"></script>
   <script defer src="js/vendor/ScrollTrigger.min.js"></script>
-  <script defer src="js/script.js?v=20261014"></script>
-  <script defer src="js/psso-product.js?v=20261014"></script>
+  <script defer src="js/script.js?v=20261014-ext1"></script>
+
 </body></html>

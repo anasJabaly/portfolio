@@ -2069,3 +2069,5 @@ html { scroll-padding-top: 100px; }
 .product-faq .hero-cta { margin-top: 20px; }
 @media (max-width: 900px) { .product-feature { grid-template-columns: minmax(0,1fr); gap: 30px; } }
 @media (max-width: 640px) { .install-steps { grid-template-columns: minmax(0,1fr); } .product-page .case-hero { padding: 56px 0 40px; } .install-steps li { padding: 22px; } .product-faq { padding: 20px; } }
+
+.product-release-status { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--border); color:var(--text-soft); background:var(--cream); font-size:.86rem; }

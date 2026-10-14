@@ -24,12 +24,14 @@ GSAP und ScrollTrigger 3.13.0 liegen lokal in `js/vendor/` (unverändert aus dem
 - PeerLearn: bestätigte Studienpreis-Einreichung und Posterwalk, keine behauptete Auszeichnung.
 - Startseite: PeerLearn TH, Klausurtrainer, Fokus für YouTube, SWP/WAWI4.
 
-## PSSO Modern
+## PSSO Modern als Browser-Erweiterung
 
-`produkte.html` stellt die Browser-Tools vor. `psso-modern.html` enthält Funktionen, Installationsanleitung, Datenverarbeitung und einen Link auf `downloads/psso-modern.user.js`. Ohne `download`-Attribut kann Tampermonkey den `.user.js`-Link als Installation erkennen. Falls der Browser keinen Installationsdialog öffnet, sind Kopieren und Datei-Download als Alternativen vorhanden. Der Build kopiert `downloads/` mit nach `dist/`.
+Die Manifest-V3-Erweiterung liegt in `extensions/psso-modern/`. Das Inhaltsscript wird nur auf `https://psso.th-koeln.de/qisserver/*` in einer isolierten Umgebung ausgeführt. Die einzige API-Berechtigung ist `storage`: gespeichert wird ausschließlich das Farbschema in `chrome.storage.local`, ohne Sync. Noten und eingeblendete Stammdaten werden lokal zur Darstellung verarbeitet; es gibt keine Netzwerkaufrufe oder externen Code.
 
-Version 2.0.1 basiert auf dem bereitgestellten Script 2.0.0. Ergänzt wurden Autor, Homepage und Update-/Download-URLs; ein fehlender optionaler Summeneintrag wird beim Lesen toleriert. Das Script hat keine zusätzlichen Netzwerkanfragen, nutzt `@grant none` und läuft laut `@match` ausschließlich auf dem PSSO-Pfad der TH Köln. Es speichert nur das Farbschema im lokalen Speicher. Tampermonkey kann die hier veröffentlichte Datei auf Updates prüfen.
+`psso-modern.html` beschreibt das Produkt und zeigt vor der Store-Freigabe den tatsächlichen Veröffentlichungsstatus. `psso-datenschutz.html` ist die öffentliche Datenschutzseite. Die installierte Erweiterung enthält zusätzlich eine offline lesbare Datenschutzseite. Keine erfundene Store-ID und kein ZIP-Download als angebliche Ein-Klick-Installation.
 
-`psso-demo.html` führt denselben Code explizit auf fiktiven Beispielzeilen aus, ohne Anmeldung oder echte Studierendendaten. Die Demo wird nicht indexiert. Das WebP-Produktbild wird aus dieser Demo aufgenommen.
+`scripts/package-psso-extension.py` validiert Paketdateien und erstellt `downloads/psso-modern-extension.zip` mit dem Manifest direkt im ZIP-Stamm. Das ZIP ist das Store-Uploadpaket und zugleich öffentlich lesbarer Quellcode. Die Store-Grafiken und Beschreibung werden separat vorbereitet.
 
-Offizielle Installationshinweise: https://www.tampermonkey.net/faq.php?locale=de&q=Q102 und https://www.tampermonkey.net/faq.php?locale=de&q=Q209. Das Projekt ist ein unabhängiges studentisches Angebot und kein offizielles TH-Köln-Produkt.
+`psso-demo.html` verwendet dieselbe UI mit fiktiven Beispielzeilen. Die Web-Demo passt lediglich den Einstellungszugriff an Website-localStorage an. Sie ist keine Anmeldung und enthält keine echten Studierendendaten. Die frühere `.user.js`-Datei bleibt als Kompatibilitätsdatei für bereits bestehende Installationen erhalten; sie ist nicht der Installationsweg der neuen Erweiterung.
+
+Nach Freigabe werden die Installationsstatus-Links auf die echte Chrome-Web-Store-ID umgestellt. Für lokale Entwicklung kann das entpackte ZIP über „Entpackte Erweiterung laden“ geprüft werden; dieser Entwicklerweg wird auf der Produktseite nicht als normale Installation angeboten.
