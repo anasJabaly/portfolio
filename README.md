@@ -35,3 +35,5 @@ Die Manifest-V3-Erweiterung liegt in `extensions/psso-modern/`. Das Inhaltsscrip
 `psso-demo.html` verwendet dieselbe UI mit fiktiven Beispielzeilen. Die Web-Demo passt lediglich den Einstellungszugriff an Website-localStorage an. Sie ist keine Anmeldung und enthält keine echten Studierendendaten. Die frühere `.user.js`-Datei bleibt als Kompatibilitätsdatei für bereits bestehende Installationen erhalten; sie ist nicht der Installationsweg der neuen Erweiterung.
 
 Nach Freigabe werden die Installationsstatus-Links auf die echte Chrome-Web-Store-ID umgestellt. Für lokale Entwicklung kann das entpackte ZIP über „Entpackte Erweiterung laden“ geprüft werden; dieser Entwicklerweg wird auf der Produktseite nicht als normale Installation angeboten.
+
+Chrome Web Store: Version 1.0.0 am 14. Oktober 2026 zur Prüfung eingereicht, automatische Veröffentlichung nach Freigabe. Tatsächliche Artikel-ID: `fhddhachicfdeihdlefjjhapalklgkng`. Der Installationslink wird erst nach bestätigter öffentlicher Freigabe angezeigt.
