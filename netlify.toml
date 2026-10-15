@@ -99,3 +99,8 @@
   from = "/psso-datenschutz"
   to = "/psso-datenschutz.html"
   status = 200
+
+[[redirects]]
+  from = "/fokus"
+  to = "/fokus.html"
+  status = 200

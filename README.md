@@ -37,3 +37,7 @@ Die Manifest-V3-Erweiterung liegt in `extensions/psso-modern/`. Das Inhaltsscrip
 Produktübersicht und Detailseite bieten den direkten Installationslink zur freigegebenen Erweiterung. Für lokale Entwicklung kann das entpackte ZIP über „Entpackte Erweiterung laden“ geprüft werden; dieser Entwicklerweg wird auf der Produktseite nicht als normale Installation angeboten.
 
 Chrome Web Store: Version 1.0.0 am 15. Oktober 2026 öffentlich veröffentlicht und geprüft: https://chromewebstore.google.com/detail/psso-modern/fhddhachicfdeihdlefjjhapalklgkng. Artikel-ID: `fhddhachicfdeihdlefjjhapalklgkng`.
+
+## Produktseiten
+
+`produkte.html` bietet für beide Erweiterungen eine kompakte Übersicht mit Installationslink und „Mehr erfahren“. Die ausführlichen Informationen stehen auf `psso-modern.html` und `fokus.html`. Beide Detailseiten führen zurück zur Produktübersicht; vorhandene Übersicht-Anker bleiben erhalten.

@@ -2071,3 +2071,10 @@ html { scroll-padding-top: 100px; }
 @media (max-width: 640px) { .install-steps { grid-template-columns: minmax(0,1fr); } .product-page .case-hero { padding: 56px 0 40px; } .install-steps li { padding: 22px; } .product-faq { padding: 20px; } }
 
 .product-release-status { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--border); color:var(--text-soft); background:var(--cream); font-size:.86rem; }
+
+/* Product overview and matching detail-page navigation. */
+.product-back-link { display: inline-block; margin-bottom: 26px; color: var(--blue-deep); font-size: .85rem; font-weight: 600; }
+.product-preview-stage { display: grid; place-items: center; aspect-ratio: 1180 / 738; border-radius: 10px; overflow: hidden; background: #163e3e; }
+.product-preview-stage img { width: auto; height: auto; max-width: 100%; max-height: 360px; border-radius: 0; }
+.product-preview--fokus { background: #e4ecec; }
+@media (max-width: 640px) { .product-preview-stage img { max-height: 280px; } }
