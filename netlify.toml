@@ -104,3 +104,8 @@
   from = "/fokus"
   to = "/fokus.html"
   status = 200
+
+[[redirects]]
+  from = "/campus-flow"
+  to = "/campus-flow.html"
+  status = 200

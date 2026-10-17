@@ -41,3 +41,9 @@ Chrome Web Store: Version 1.0.0 am 15. Oktober 2026 öffentlich veröffentlicht 
 ## Produktseiten
 
 `produkte.html` bietet für beide Erweiterungen eine kompakte Übersicht mit Installationslink und „Mehr erfahren“. Die ausführlichen Informationen stehen auf `psso-modern.html` und `fokus.html`. Beide Detailseiten führen zurück zur Produktübersicht; vorhandene Übersicht-Anker bleiben erhalten.
+
+## Campus Flow
+
+`campus-flow.html` stellt das kostenlose Notion-Template als eigenständige Produktgeschichte vor. `css/campus-flow.css` und `js/campus-flow.js` sind auf diese Seite begrenzt. Die Scroll-Illustration ordnet auf ausreichend großen Bildschirmen vier Karten und blendet eine echte Vorschau ein. Auf kleinen Bildschirmen, bei reduced motion und ohne JavaScript bleiben die Geschichte und Screenshots normal lesbar. Es gibt keine Scroll-Übernahme. Die Preview-Tabs unterstützen Tastaturbedienung.
+
+Die Bilder unter `img/products/campus-flow/` stammen ausschließlich aus der bereinigten Demo im Chat „Notion-UNI-Template optimieren“. Keine privaten Seiten-URLs, Kontodetails oder persönlichen Studienunterlagen werden veröffentlicht. Die bereinigte Demo wurde am 17. Oktober 2026 mit aktivierter Duplizierbarkeit öffentlich freigegeben: https://fortunate-lifter-b49.notion.site/Campus-Flow-Study-Life-Planner-c78effff73d18260a9be01594fbf0cbe. Die Produktübersicht und Detailseite führen direkt dorthin. Kein Zahlungsprozess und keine behauptete automatische Kalender-Synchronisation. Eine vollständige Duplizierung in einen fremden Workspace ist weiterhin separat zu prüfen.
