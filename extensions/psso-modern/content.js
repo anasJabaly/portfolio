@@ -1,4 +1,4 @@
-// PSSO Modern 1.0.0 · Anas Jabaly
+// PSSO Modern 1.1.0 · Anas Jabaly
 // Reads the loaded PSSO table locally. Only the color scheme is persisted.
 (async function () {
   'use strict';
@@ -8,7 +8,7 @@
   const DARK_CLASS = 'psso-modern-dark';
   const STORAGE_THEME = 'psso-modern-theme';
 
-  if (document.getElementById(ROOT_ID)) return;
+  if (document.getElementById(ROOT_ID) || document.querySelector('input[type="password"]')) return;
 
   const clean = (value) => String(value || '').replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
   const cellText = (row, index) => clean(row?.cells?.[index]?.textContent);

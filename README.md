@@ -38,6 +38,18 @@ Produktübersicht und Detailseite bieten den direkten Installationslink zur frei
 
 Chrome Web Store: Version 1.0.0 am 15. Oktober 2026 öffentlich veröffentlicht und geprüft: https://chromewebstore.google.com/detail/psso-modern/fhddhachicfdeihdlefjjhapalklgkng. Artikel-ID: `fhddhachicfdeihdlefjjhapalklgkng`.
 
+## PSSO Modern 1.1.0 · vorbereitetes Update
+
+Zusätzlich zum bisherigen Notenspiegel gestaltet `portal.js` mit `portal.css` die angemeldete Startseite und die nativen Verwaltungs-, Menü- und Auswahlseiten um. Erkannt werden die am 20. Oktober 2026 lesend geprüften PSSO-Container `.content` und `.content_max_portal_qis`, die Seitennavigation `#makronavigation` und die Bereichsauswahl `.divlinks`.
+
+Navigation, Originalformulare, versteckte Formularfelder, Links und Ereignisbehandlung werden nicht ersetzt oder in andere Formulare verschoben. Die Startkarten lösen lediglich den bereits vorhandenen Navigationslink aus. Passworteingaben und unbekannte Seitenlayouts bleiben unberührt. Die Originalansicht ist jederzeit erreichbar. Downtime- und andere vorhandene Meldungen bleiben sichtbar. Es bleiben dieselben Host-Matches und ausschließlich die Berechtigung `storage`; gespeichert wird weiterhin nur das Farbschema.
+
+Die verschachtelte Prüfungs-Baumansicht (`ul.treelist`) wurde zusätzlich auf der echten Seite lesend geprüft. Modulname und vorhandene Statusangaben werden optisch getrennt; eine lokale Suche zeigt Treffer samt übergeordnetem Pfad. Sie durchsucht ausschließlich bereits geladene Einträge, lädt keine Zweige nach und führt keine Prüfungsaktionen aus. Die Originalansicht zeigt auch bei aktiver Suche alle geladenen Zeilen.
+
+`review-portal.html` bietet lokale fiktive Start-, Formular-, Prüfungsbaum-, Tabellen- und Downloadansichten. Der Demo-Adapter wird ausschließlich von dieser Vorschauseite geladen und ist kein Inhaltsscript. Formularwerte und Auswahlzustände wurden beim Ansichtswechsel geprüft; die Darstellung wurde außerdem gegen eine anonymisierte Original-Startseite samt Original-Styles und bei 360 px Breite kontrolliert. Der bisherige Notenspiegel mit sechs Beispielmodulen und Suche ist geprüft. Der neue Code wurde im verfügbaren Browser nicht als installierte Erweiterung auf produktiven Prüfungsformularen ausgeführt. Keine echten An-/Abmeldungen wurden ausgelöst.
+
+Der Chrome Web Store bleibt bei der oben dokumentierten Version 1.0.0, bis 1.1.0 dort als Update eingereicht und freigegeben ist. Die öffentliche Produktseite wird deshalb noch nicht als auf 1.1.0 aktualisiert ausgegeben. Die anonymisierten Original-Testseiten und TH-Styles liegen nur im Arbeitsverzeichnis und werden nicht ins Erweiterungspaket aufgenommen.
+
 ## Produktseiten
 
 `produkte.html` bietet für beide Erweiterungen eine kompakte Übersicht mit Installationslink und „Mehr erfahren“. Die ausführlichen Informationen stehen auf `psso-modern.html` und `fokus.html`. Beide Detailseiten führen zurück zur Produktübersicht; vorhandene Übersicht-Anker bleiben erhalten.
